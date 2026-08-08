@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: math/mathlib
+entries:
+  - name: mathlib.yaml
+    type: manifest

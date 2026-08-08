@@ -10,6 +10,8 @@ entries:
     type: dir
   - name: law
     type: dir
+  - name: math
+    type: dir
   - name: post-train
     type: dir
   - name: science
