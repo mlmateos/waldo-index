@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: code/git
+entries:
+  - name: git.yaml
+    type: manifest

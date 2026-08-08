@@ -2,6 +2,8 @@ kind: index
 schema: 1
 path: ""
 entries:
+  - name: code
+    type: dir
   - name: core
     type: dir
   - name: government
