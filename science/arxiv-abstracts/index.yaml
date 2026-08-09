@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: science/arxiv-abstracts
+entries:
+  - name: arxiv-abstracts.yaml
+    type: manifest

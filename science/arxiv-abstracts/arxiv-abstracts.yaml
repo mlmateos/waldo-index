@@ -1,0 +1,79 @@
+kind: manifest
+schema: 2
+name: arxiv-abstracts
+title: ArXiv Abstracts
+description: Paper titles and abstracts from ArXiv metadata, via the filtered Common Pile release.
+license: CC0-1.0
+sources:
+  - name: common-pile/arxiv_abstracts_filtered
+    source: common-pile/arxiv_abstracts_filtered
+    version: dc1ceab4755eb037ec61e49cf1350dab7ceee6e7
+    license: CC0-1.0
+    url: https://huggingface.co/datasets/common-pile/arxiv_abstracts_filtered
+    category: public-dataset
+    sha256: 90305a547a33b0bb61ebdd3be25c76a0ed0e24c62f160f0f73277ed63d634174
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@0e132ba9a7c0bc5e21f7997d3a99938209af6ce2:recipes/science/arxiv-abstracts.yaml
+  profile: canonical-text-schema-1@sha256:f56f638dd9e5c47db7e651b7581496453d6933be0cf8f4fa9e52f410a19e96d7
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/f2/e0/f2e0b22840c4c0c84b9e5f3f1bc04fbd41b60458fc4a068fde812fd332212fce
+    sha256: f2e0b22840c4c0c84b9e5f3f1bc04fbd41b60458fc4a068fde812fd332212fce
+    license: CC0-1.0
+    license_usage:
+      CC0-1.0:
+        shards: 0
+        docs: 833630
+        tokens: 163881927
+        bytes: 0
+    sources:
+      - common-pile/arxiv_abstracts_filtered
+    docs: 833630
+    tokens: 163881927
+    bytes: 288884902
+  - url: s3://openwaldo/lookaside/72/fe/72fe36438a85bbb684cbf72ed76f8635f68fe71a0fed9e045cb5afd8196acc41
+    sha256: 72fe36438a85bbb684cbf72ed76f8635f68fe71a0fed9e045cb5afd8196acc41
+    license: CC0-1.0
+    license_usage:
+      CC0-1.0:
+        shards: 0
+        docs: 712695
+        tokens: 159057614
+        bytes: 0
+    sources:
+      - common-pile/arxiv_abstracts_filtered
+    docs: 712695
+    tokens: 159057614
+    bytes: 282666066
+  - url: s3://openwaldo/lookaside/bd/15/bd15e76f61c7e5a6f29cf66b05dc5748f107f358380e74c583fc7497f1bee95f
+    sha256: bd15e76f61c7e5a6f29cf66b05dc5748f107f358380e74c583fc7497f1bee95f
+    license: CC0-1.0
+    license_usage:
+      CC0-1.0:
+        shards: 0
+        docs: 681224
+        tokens: 158105567
+        bytes: 0
+    sources:
+      - common-pile/arxiv_abstracts_filtered
+    docs: 681224
+    tokens: 158105567
+    bytes: 278831784
+  - url: s3://openwaldo/lookaside/a3/63/a363df361082e714289e1ee859d75cfa09c0676f178b80793d9ad404f39672dd
+    sha256: a363df361082e714289e1ee859d75cfa09c0676f178b80793d9ad404f39672dd
+    license: CC0-1.0
+    license_usage:
+      CC0-1.0:
+        shards: 0
+        docs: 276638
+        tokens: 41045571
+        bytes: 0
+    sources:
+      - common-pile/arxiv_abstracts_filtered
+    docs: 276638
+    tokens: 41045571
+    bytes: 69194956

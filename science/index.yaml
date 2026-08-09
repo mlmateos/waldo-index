@@ -2,6 +2,8 @@ kind: index
 schema: 1
 path: science
 entries:
+  - name: arxiv-abstracts
+    type: dir
   - name: pes2o
     type: dir
   - name: plos
