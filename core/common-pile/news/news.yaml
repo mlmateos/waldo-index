@@ -1,0 +1,59 @@
+kind: manifest
+schema: 2
+name: news
+title: Common Pile News
+description: Openly licensed news articles from seventeen publishers, via the filtered Common Pile release.
+licenses:
+  - CC-BY-4.0
+  - CC-BY-SA-4.0
+sources:
+  - name: common-pile/news_filtered
+    source: common-pile/news_filtered
+    version: 59aaa8f104e189e6fb8033f0ed319c5c343a03b1
+    license: LicenseRef-Mixed
+    license_evidence:
+      url: https://huggingface.co/datasets/common-pile/news_filtered/blob/59aaa8f104e189e6fb8033f0ed319c5c343a03b1/README.md
+    url: https://huggingface.co/datasets/common-pile/news_filtered
+    category: public-dataset
+    sha256: 5e3dae9198c131b8f02b48cfbf9ac0aa0ec6eb95911e9c3344c269b5a673e320
+    content:
+      types:
+        - articles
+        - news
+      languages:
+        - en
+      selection: All gzip JSONL artifacts at the pinned filtered Common Pile revision from the seventeen enumerated publisher source labels and two enumerated per-record licenses.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Public dataset release at the pinned revision with per-record license and original article URL evidence.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@083d5948f118410c2817ee925cf98f3b4a4b0d8d:recipes/common-pile/news.yaml
+  profile: canonical-text-schema-1@sha256:3f18d81a3a491369d3245bbaac6e089f0621ed0939bec8164a88969937f7f90e
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/f6/2b/f62b714f6eac1b7ea5a411820d1d885dd13c392786aa45e5a4278d2e97d275a1
+    sha256: f62b714f6eac1b7ea5a411820d1d885dd13c392786aa45e5a4278d2e97d275a1
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 109929
+        tokens: 47869118
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 16735
+        tokens: 6749527
+        bytes: 0
+    sources:
+      - common-pile/news_filtered
+    docs: 126664
+    tokens: 54618645
+    bytes: 90576007

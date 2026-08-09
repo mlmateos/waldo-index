@@ -6,7 +6,11 @@ entries:
     type: dir
   - name: libretexts
     type: dir
+  - name: news
+    type: dir
   - name: oercommons
+    type: dir
+  - name: pressbooks
     type: dir
   - name: public-domain-review
     type: dir

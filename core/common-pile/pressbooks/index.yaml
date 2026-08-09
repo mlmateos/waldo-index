@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: core/common-pile/pressbooks
+entries:
+  - name: pressbooks.yaml
+    type: manifest
