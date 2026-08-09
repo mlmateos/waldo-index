@@ -4,6 +4,8 @@ path: ""
 entries:
   - name: code
     type: dir
+  - name: community
+    type: dir
   - name: core
     type: dir
   - name: government

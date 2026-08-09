@@ -1,0 +1,101 @@
+kind: manifest
+schema: 2
+name: apache-mailing-lists
+title: Apache Project Development Mailing Lists
+description: Checksum-pinned 2025 public development discussions for Apache HTTP Server, Subversion, and Commons.
+license: LicenseRef-Apache-Public-Forum
+sources:
+  - name: dev@httpd.apache.org
+    source: dev@httpd.apache.org
+    version: "2025"
+    license: LicenseRef-Apache-Public-Forum
+    license_evidence:
+      declaration: Published by the sender and made public without conditions under the ASF Public Forum Archive Policy.
+      url: https://www.apache.org/foundation/public-archives.html
+    url: https://lists.apache.org/list.html?dev@httpd.apache.org
+    category: public-dataset
+    sha256: 13238fa3404cfc35cda151e26dd6dc62d2a57bec4712b07dccda5607354bc82e
+    content:
+      types:
+        - developer communications
+        - mailing list
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve monthly raw mbox exports for the public HTTP Server development list during calendar year 2025, retained as checksum-pinned UTF-8 text.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Apache raw mbox API with a reviewed SHA-256 for every selected month.
+  - name: dev@subversion.apache.org
+    source: dev@subversion.apache.org
+    version: "2025"
+    license: LicenseRef-Apache-Public-Forum
+    license_evidence:
+      declaration: Published by the sender and made public without conditions under the ASF Public Forum Archive Policy.
+      url: https://www.apache.org/foundation/public-archives.html
+    url: https://lists.apache.org/list.html?dev@subversion.apache.org
+    category: public-dataset
+    sha256: d4e530a535fa2fd815ab51985da1dc75849114d8e2a548ed62984887fdcc6b08
+    content:
+      types:
+        - developer communications
+        - mailing list
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve monthly raw mbox exports for the public Subversion development list during calendar year 2025, retained as checksum-pinned UTF-8 text.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Apache raw mbox API with a reviewed SHA-256 for every selected month.
+  - name: dev@commons.apache.org
+    source: dev@commons.apache.org
+    version: "2025"
+    license: LicenseRef-Apache-Public-Forum
+    license_evidence:
+      declaration: Published by the sender and made public without conditions under the ASF Public Forum Archive Policy.
+      url: https://www.apache.org/foundation/public-archives.html
+    url: https://lists.apache.org/list.html?dev@commons.apache.org
+    category: public-dataset
+    sha256: 9735f48b72331b6c00a42a5169c04a94fcc6a526c1ef63305d0a6264c56e989b
+    content:
+      types:
+        - developer communications
+        - mailing list
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve monthly raw mbox exports for the public Commons development list during calendar year 2025, retained as checksum-pinned UTF-8 text.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Apache raw mbox API with a reviewed SHA-256 for every selected month.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@9dd631a:recipes/community/apache-mailing-lists.yaml#sha256=58777379ba855ac28d45d091447164c782ffc9869d96ecf590bc41476de7d04e
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/7d/98/7d98ae5f1314305d091c44609a8ffaff0c11fbc2e86028de3924844ca7e0dc21
+    sha256: 7d98ae5f1314305d091c44609a8ffaff0c11fbc2e86028de3924844ca7e0dc21
+    license: LicenseRef-Apache-Public-Forum
+    license_usage:
+      LicenseRef-Apache-Public-Forum:
+        shards: 0
+        docs: 36
+        tokens: 9754829
+        bytes: 0
+    sources:
+      - dev@commons.apache.org
+      - dev@httpd.apache.org
+      - dev@subversion.apache.org
+    docs: 36
+    tokens: 9754829
+    bytes: 4631176

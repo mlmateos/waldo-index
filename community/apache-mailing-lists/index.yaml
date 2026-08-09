@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/apache-mailing-lists
+entries:
+  - name: apache-mailing-lists.yaml
+    type: manifest
