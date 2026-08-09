@@ -4,6 +4,8 @@ path: core/common-pile
 entries:
   - name: foodista
     type: dir
+  - name: libretexts
+    type: dir
   - name: oercommons
     type: dir
   - name: public-domain-review

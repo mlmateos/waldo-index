@@ -1,0 +1,94 @@
+kind: manifest
+schema: 2
+name: libretexts
+title: LibreTexts
+description: Open textbook sections from LibreTexts, via the filtered Common Pile release.
+licenses:
+  - CC-BY-3.0
+  - CC-BY-4.0
+  - CC-BY-SA-2.5
+  - CC-BY-SA-3.0
+  - CC-BY-SA-4.0
+  - GNU Free Documentation License
+  - LicenseRef-Public-Domain
+sources:
+  - name: common-pile/libretexts_filtered
+    source: common-pile/libretexts_filtered
+    version: 70388bca52b4a93515e14b1d56618fd7944988fd
+    license: LicenseRef-Mixed
+    license_evidence:
+      url: https://huggingface.co/datasets/common-pile/libretexts_filtered/blob/70388bca52b4a93515e14b1d56618fd7944988fd/README.md
+    url: https://huggingface.co/datasets/common-pile/libretexts_filtered
+    category: public-dataset
+    sha256: a4cfef23b12824b5bef4c4c1465b47a2b2aef0e635adb6ad76620e6e4121c9fa
+    content:
+      types:
+        - open educational resources
+        - textbooks
+      languages:
+        - en
+      selection: All gzip JSONL artifacts at the pinned filtered Common Pile revision whose per-record license normalizes to one of the seven enumerated accepted values.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Public dataset release at the pinned revision with per-record license evidence.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@8afd041154727ea7f54ec4b9648f04ac32cdb020:recipes/education/libretexts.yaml
+  profile: canonical-text-schema-1@sha256:a92e3041a57c722b6a4f860cefa388c655238b62bd1bc2a89024ced7d413658d
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/84/42/8442a5ccf4f2b77a7494c7409aaa8832ded19b2217c7e2f9ef7c695d785aa885
+    sha256: 8442a5ccf4f2b77a7494c7409aaa8832ded19b2217c7e2f9ef7c695d785aa885
+    licenses:
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-2.5
+      - CC-BY-SA-3.0
+      - CC-BY-SA-4.0
+      - GNU Free Documentation License
+      - LicenseRef-Public-Domain
+    license_usage:
+      CC-BY-3.0:
+        shards: 0
+        docs: 1060
+        tokens: 3158019
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 24200
+        tokens: 51329700
+        bytes: 0
+      CC-BY-SA-2.5:
+        shards: 0
+        docs: 3
+        tokens: 5037
+        bytes: 0
+      CC-BY-SA-3.0:
+        shards: 0
+        docs: 692
+        tokens: 1248924
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 12141
+        tokens: 23400900
+        bytes: 0
+      GNU Free Documentation License:
+        shards: 0
+        docs: 757
+        tokens: 1150173
+        bytes: 0
+      LicenseRef-Public-Domain:
+        shards: 0
+        docs: 1189
+        tokens: 3981610
+        bytes: 0
+    sources:
+      - common-pile/libretexts_filtered
+    docs: 40042
+    tokens: 84274363
+    bytes: 109222781
