@@ -1,0 +1,114 @@
+kind: manifest
+schema: 2
+name: permissive
+title: Permissively Licensed Project Code
+description: Project-owned source files from pinned permissively licensed project revisions, grouped by project provenance and packed together by WALDO.
+licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+sources:
+  - name: flask
+    source: flask
+    version: 22d924701a6ae2e4cd01e9a15bbaf3946094af65
+    license: BSD-3-Clause
+    license_evidence:
+      url: https://github.com/pallets/flask/blob/22d924701a6ae2e4cd01e9a15bbaf3946094af65/LICENSE.txt
+    url: https://github.com/pallets/flask
+    category: public-dataset
+    sha256: 66d4a4147caafcfb1d304d1583867b1ed33f17a92700e07591c0c64e582badaa
+    content:
+      types:
+        - source code
+      languages:
+        - Python
+      selection: Project-owned Python files under src/flask at the pinned revision.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+  - name: go
+    source: go
+    version: c19862e5f8415b4f24b189d065ed739517c548ba
+    license: BSD-3-Clause
+    license_evidence:
+      url: https://go.googlesource.com/go/+/c19862e5f8415b4f24b189d065ed739517c548ba/LICENSE
+    url: https://go.googlesource.com/go
+    category: public-dataset
+    sha256: 6763a8f3901ed412cbdc098e9e5b1ef03174567332c740e27c80a9b1cb2aad90
+    content:
+      types:
+        - source code
+      languages:
+        - Go
+      selection: Project-owned Go files under src at the pinned revision; vendor and testdata trees excluded.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+  - name: kubernetes
+    source: kubernetes
+    version: 0f29094e5b73085e3802ecc1298ecae13866bfe6
+    license: Apache-2.0
+    license_evidence:
+      url: https://github.com/kubernetes/kubernetes/blob/0f29094e5b73085e3802ecc1298ecae13866bfe6/LICENSE
+    url: https://github.com/kubernetes/kubernetes
+    category: public-dataset
+    sha256: 208bfe06957e9011b063f3177a5b0961854a9e37492d9573a3de109fdd55a961
+    content:
+      types:
+        - source code
+      languages:
+        - Go
+      selection: Project-owned Go files under cmd, pkg, plugin, and staging/src/k8s.io; vendor, testdata, and generated files excluded.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+  - name: requests
+    source: requests
+    version: 6e83187b8feb273ed4c6cdab5efd8d54901dfab3
+    license: Apache-2.0
+    license_evidence:
+      url: https://github.com/psf/requests/blob/6e83187b8feb273ed4c6cdab5efd8d54901dfab3/LICENSE
+    url: https://github.com/psf/requests
+    category: public-dataset
+    sha256: 7f0d4231b2dda0482e24e93838be0e85fe6bf1e4bd0c48cdf3848dc6cc8c2b2e
+    content:
+      types:
+        - source code
+      languages:
+        - Python
+      selection: Project-owned Python files under src/requests at the pinned revision.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@4f36b94f95a9890e2bf4d66f7ce5924e15cf297b:recipes/code/permissive.yaml
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/36/a7/36a773df673953829b80dd3aa67ae6eebd4c19676c037b25d241b218c32059da
+    sha256: 36a773df673953829b80dd3aa67ae6eebd4c19676c037b25d241b218c32059da
+    licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+    license_usage:
+      Apache-2.0:
+        shards: 0
+        docs: 9969
+        tokens: 23143155
+        bytes: 0
+      BSD-3-Clause:
+        shards: 0
+        docs: 5584
+        tokens: 22006286
+        bytes: 0
+    sources:
+      - flask
+      - go
+      - kubernetes
+      - requests
+    docs: 15553
+    tokens: 45149441
+    bytes: 25885579

@@ -1,0 +1,70 @@
+kind: manifest
+schema: 2
+name: copyleft
+title: Copyleft-Licensed Project Code
+description: Project-owned source files from pinned copyleft-licensed project revisions, grouped by project provenance and packed together by WALDO.
+license: GPL-2.0-only
+sources:
+  - name: git
+    source: git
+    version: e9019fcafe0040228b8631c30f97ae1adb61bcdc
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://github.com/git/git/blob/e9019fcafe0040228b8631c30f97ae1adb61bcdc/COPYING
+    url: https://github.com/git/git
+    category: public-dataset
+    sha256: 30aa57cb8e01d86802cdb4495ea4bbe83098cbb4c619cabdbbdb1a80f54cd36c
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - shell
+      selection: Project-owned C, header, and shell files at the pinned revision; compatibility, test, and contributed trees excluded.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+  - name: linux
+    source: linux
+    version: 038d61fd642278bab63ee8ef722c50d10ab01e8f
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/COPYING?id=038d61fd642278bab63ee8ef722c50d10ab01e8f
+    url: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+    category: public-dataset
+    sha256: 14e44e55c0e4bd99a33ce9ab3695fbefa1956a389a966a659d9144ed480a7dcf
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+        - Rust
+      selection: Tracked regular C, header, assembly, and Rust files at the pinned revision; 29 selected symlinks are explicitly skipped with warnings.
+      copyrighted: yes
+    acquisition:
+      basis: Public Git repository at the pinned commit.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@4f36b94f95a9890e2bf4d66f7ce5924e15cf297b+dirty:recipes/code/copyleft.yaml#sha256=59ff588e49ce468cf28202929ab38acb8b394fe960e333919fdfd4af9e063d44
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/1b/f7/1bf7dc7fe8d920fd72e13ae39404b4a18cf9b19e80724006a41c69ac8bf9b760
+    sha256: 1bf7dc7fe8d920fd72e13ae39404b4a18cf9b19e80724006a41c69ac8bf9b760
+    license: GPL-2.0-only
+    license_usage:
+      GPL-2.0-only:
+        shards: 0
+        docs: 63566
+        tokens: 414518857
+        bytes: 0
+    sources:
+      - git
+      - linux
+    docs: 63566
+    tokens: 414518857
+    bytes: 197352151

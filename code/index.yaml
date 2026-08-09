@@ -2,5 +2,7 @@ kind: index
 schema: 1
 path: code
 entries:
-  - name: git
+  - name: copyleft
+    type: dir
+  - name: permissive
     type: dir
