@@ -4,6 +4,8 @@ path: community
 entries:
   - name: apache-mailing-lists
     type: dir
+  - name: git-mailing-list
+    type: dir
   - name: linux-kernel-mailing-list
     type: dir
   - name: opensource-mailing-lists

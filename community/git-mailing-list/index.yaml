@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/git-mailing-list
+entries:
+  - name: git-mailing-list.yaml
+    type: manifest
