@@ -1,0 +1,113 @@
+kind: manifest
+schema: 2
+name: opensource-mailing-lists
+title: Open Source Community Mailing Lists
+description: Checksum-pinned 2025 public discussions from the Beowulf and Open Source Initiative communities.
+licenses:
+  - LicenseRef-OSI-Public-Forum
+  - LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: Beowulf Mailing List
+    source: Beowulf Mailing List
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: The project identifies Beowulf as a public mailing list and provides downloadable monthly text archives; no blanket content license is stated.
+      url: https://beowulf.org/cgi-bin/mailman/listinfo/
+    url: https://beowulf.org/pipermail/beowulf/
+    category: public-dataset
+    sha256: a46dd0c8d1fbf512c9ebea3f2a89a5cca0815cc5824bc1b6af99df2e4affbae5
+    content:
+      types:
+        - high-performance computing
+        - mailing list
+        - user community support
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-11
+      selection: All six non-empty monthly text exports published for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official public Mailman archive with each available monthly gzip text export checksum-pinned.
+  - name: OSI License Review
+    source: OSI License Review
+    version: "2025"
+    license: LicenseRef-OSI-Public-Forum
+    license_evidence:
+      declaration: OSI deems public-forum communications published by the sender and made public without condition.
+      url: https://opensource.org/public_archives_policy/
+    url: https://lists.opensource.org/pipermail/license-review_lists.opensource.org/
+    category: public-dataset
+    sha256: 338590070de06bdcf4ee0c9b854d7ca51f94c892dec71c1739cd16f85d7864ef
+    content:
+      types:
+        - license review
+        - mailing list
+        - open source governance
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve monthly gzip text exports for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official public Mailman archive with each monthly export checksum-pinned.
+  - name: OSI License Discuss
+    source: OSI License Discuss
+    version: "2025"
+    license: LicenseRef-OSI-Public-Forum
+    license_evidence:
+      declaration: OSI deems public-forum communications published by the sender and made public without condition.
+      url: https://opensource.org/public_archives_policy/
+    url: https://lists.opensource.org/pipermail/license-discuss_lists.opensource.org/
+    category: public-dataset
+    sha256: 2328e9163abe4a6e1171910aa6dbefb352bd1dd939c566434643e8aaa2db0f61
+    content:
+      types:
+        - license discussion
+        - mailing list
+        - open source governance
+      languages:
+        - en
+      from: 2025-02
+      to: 2025-12
+      selection: All ten non-empty monthly gzip text exports published for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official public Mailman archive with each available monthly export checksum-pinned.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@c8d94ad:recipes/community/opensource-mailing-lists.yaml#sha256=c444332b920ff1c163f4af30f8eb64afd35ce5e64c8d471122d3b6cd95f43a8a
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/06/9f/069f9842a8b31282b3b0e90fb8d272ddc186758d87eba9fe8e4ff8c68803cfa8
+    sha256: 069f9842a8b31282b3b0e90fb8d272ddc186758d87eba9fe8e4ff8c68803cfa8
+    licenses:
+      - LicenseRef-OSI-Public-Forum
+      - LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-OSI-Public-Forum:
+        shards: 0
+        docs: 22
+        tokens: 858654
+        bytes: 0
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 6
+        tokens: 15260
+        bytes: 0
+    sources:
+      - Beowulf Mailing List
+      - OSI License Discuss
+      - OSI License Review
+    docs: 28
+    tokens: 873914
+    bytes: 507463

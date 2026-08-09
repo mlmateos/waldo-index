@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/opensource-mailing-lists
+entries:
+  - name: opensource-mailing-lists.yaml
+    type: manifest
