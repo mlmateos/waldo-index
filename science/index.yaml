@@ -4,6 +4,8 @@ path: science
 entries:
   - name: arxiv-abstracts
     type: dir
+  - name: arxiv-papers
+    type: dir
   - name: pes2o
     type: dir
   - name: plos

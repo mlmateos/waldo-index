@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: science/arxiv-papers
+entries:
+  - name: arxiv-papers.yaml
+    type: manifest

@@ -1,0 +1,633 @@
+kind: manifest
+schema: 2
+name: arxiv-papers
+title: ArXiv Papers
+description: Full openly licensed ArXiv paper text from the filtered Common Pile release.
+licenses:
+  - CC-BY-3.0
+  - CC-BY-4.0
+  - CC-BY-SA-4.0
+  - CC0-1.0
+  - LicenseRef-Public-Domain
+sources:
+  - name: common-pile/arxiv_papers_filtered
+    source: common-pile/arxiv_papers_filtered
+    version: 033cf7f53f9b348deec868c1a5a48484f3ee9e52
+    license: LicenseRef-Mixed
+    license_evidence:
+      url: https://huggingface.co/datasets/common-pile/arxiv_papers_filtered/blob/033cf7f53f9b348deec868c1a5a48484f3ee9e52/README.md
+    url: https://huggingface.co/datasets/common-pile/arxiv_papers_filtered
+    category: public-dataset
+    sha256: 806a76cbcb637b105297876ba4c10d23156ac67914f16b31bcd42d9c29e6dd49
+    content:
+      types:
+        - academic papers
+        - scientific literature
+      languages:
+        - en
+      selection: All eight gzip JSONL artifacts at the pinned filtered Common Pile revision; all 295,424 records carry one of five enumerated open or public-domain license values.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Public dataset release at the pinned revision with per-record license and original ArXiv URL evidence.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@3fdca04:recipes/science/arxiv-papers.yaml#sha256=9a1760045b7e4811de2a34249f5788a697a4491d3503c8e59c979713b967fc42
+  profile: canonical-text-schema-1@sha256:ddb0260e4d225ba85acf44be7cc9415ebdca6905440f56884d55c2f268010fd2
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/f5/33/f5335806792e0bdac68e23d129832b5d59a48fa8a973cd49866ee3d7578c143a
+    sha256: f5335806792e0bdac68e23d129832b5d59a48fa8a973cd49866ee3d7578c143a
+    licenses:
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+      - LicenseRef-Public-Domain
+    license_usage:
+      CC-BY-3.0:
+        shards: 0
+        docs: 5555
+        tokens: 85555632
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 7058
+        tokens: 142099992
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 1246
+        tokens: 29042451
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 1151
+        tokens: 19985471
+        bytes: 0
+      LicenseRef-Public-Domain:
+        shards: 0
+        docs: 1818
+        tokens: 27941373
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 16828
+    tokens: 304624919
+    bytes: 278400571
+  - url: s3://openwaldo/lookaside/f4/fe/f4fe104b67a96af5007a7e054132bc729b89a015c138c2668e926d19096292ea
+    sha256: f4fe104b67a96af5007a7e054132bc729b89a015c138c2668e926d19096292ea
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 11853
+        tokens: 236303795
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 1496
+        tokens: 31888375
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 1383
+        tokens: 23560755
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14732
+    tokens: 291752925
+    bytes: 283232291
+  - url: s3://openwaldo/lookaside/71/1f/711fdc67e6f7840558931b21be5421853f3f7e7f8826ea898c533996167decc4
+    sha256: 711fdc67e6f7840558931b21be5421853f3f7e7f8826ea898c533996167decc4
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12946
+        tokens: 271118666
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 627
+        tokens: 12292815
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 718
+        tokens: 14144164
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14291
+    tokens: 297555645
+    bytes: 280383298
+  - url: s3://openwaldo/lookaside/a6/8b/a68b024fb2b320f4943537547bc2e48336d29ec94d3f85764fd31e39c95b5449
+    sha256: a68b024fb2b320f4943537547bc2e48336d29ec94d3f85764fd31e39c95b5449
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 13148
+        tokens: 272604983
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 655
+        tokens: 12952539
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 580
+        tokens: 11004839
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14383
+    tokens: 296562361
+    bytes: 280435259
+  - url: s3://openwaldo/lookaside/2e/20/2e203a508411e51df1f33a079eaf7ba6d6831881e9a26e9aefe67b83ff07747c
+    sha256: 2e203a508411e51df1f33a079eaf7ba6d6831881e9a26e9aefe67b83ff07747c
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12946
+        tokens: 273974665
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 663
+        tokens: 12900383
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 593
+        tokens: 11487196
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14202
+    tokens: 298362244
+    bytes: 279735525
+  - url: s3://openwaldo/lookaside/07/5f/075ff5ac7c3d1a9ffd36109085b02a8325dc00e6d0fe2d6e3eed71e3d68f9732
+    sha256: 075ff5ac7c3d1a9ffd36109085b02a8325dc00e6d0fe2d6e3eed71e3d68f9732
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 13315
+        tokens: 271991191
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 659
+        tokens: 12205276
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 574
+        tokens: 11841625
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14548
+    tokens: 296038092
+    bytes: 281304438
+  - url: s3://openwaldo/lookaside/95/77/9577ce867635fc09c6eba6a1b99ba620610ee2f15bf3cbd66b8309a309a6f97d
+    sha256: 9577ce867635fc09c6eba6a1b99ba620610ee2f15bf3cbd66b8309a309a6f97d
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12956
+        tokens: 275274434
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 577
+        tokens: 11730662
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 550
+        tokens: 11113175
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14083
+    tokens: 298118271
+    bytes: 280463024
+  - url: s3://openwaldo/lookaside/a0/f0/a0f0776952e910fd90b63f00b0aa74be489c9860b8437fd4b20bbf9d85645f00
+    sha256: a0f0776952e910fd90b63f00b0aa74be489c9860b8437fd4b20bbf9d85645f00
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12896
+        tokens: 274903350
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 573
+        tokens: 10839229
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 523
+        tokens: 10376306
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13992
+    tokens: 296118885
+    bytes: 281176621
+  - url: s3://openwaldo/lookaside/8b/7b/8b7bc17e32cb7d6af2e84c0588ffda9dd40c6a0cb95f635a70e9b973e6e94b42
+    sha256: 8b7bc17e32cb7d6af2e84c0588ffda9dd40c6a0cb95f635a70e9b973e6e94b42
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12855
+        tokens: 272036317
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 623
+        tokens: 12225879
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 514
+        tokens: 11050096
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13992
+    tokens: 295312292
+    bytes: 281190272
+  - url: s3://openwaldo/lookaside/7e/fd/7efd54c733d6d8a4fcdcff1f76ab741d6f95c6878b7fb469c4fd1c8667fdfe95
+    sha256: 7efd54c733d6d8a4fcdcff1f76ab741d6f95c6878b7fb469c4fd1c8667fdfe95
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12856
+        tokens: 275236333
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 607
+        tokens: 11212207
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 493
+        tokens: 10012915
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13956
+    tokens: 296461455
+    bytes: 279748174
+  - url: s3://openwaldo/lookaside/c5/4b/c54bfecb6a7a8a833a481074f5cdf429e27b0b0a7ca66b9161d694f5446e6591
+    sha256: c54bfecb6a7a8a833a481074f5cdf429e27b0b0a7ca66b9161d694f5446e6591
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 13102
+        tokens: 273056941
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 671
+        tokens: 12271145
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 472
+        tokens: 9624509
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14245
+    tokens: 294952595
+    bytes: 281208188
+  - url: s3://openwaldo/lookaside/80/25/8025fe94497c4a7b0e7a4b8a895c3523e58b894443a723948988c07023441414
+    sha256: 8025fe94497c4a7b0e7a4b8a895c3523e58b894443a723948988c07023441414
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12671
+        tokens: 273703523
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 578
+        tokens: 12433900
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 504
+        tokens: 10274777
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13753
+    tokens: 296412200
+    bytes: 279989981
+  - url: s3://openwaldo/lookaside/c8/c7/c8c756ab978ac0adbbf59a7b8394962f82911dfefb938571c2f18d3ef9d3eb29
+    sha256: c8c756ab978ac0adbbf59a7b8394962f82911dfefb938571c2f18d3ef9d3eb29
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 13043
+        tokens: 271654212
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 636
+        tokens: 12417119
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 494
+        tokens: 9984319
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14173
+    tokens: 294055650
+    bytes: 282344078
+  - url: s3://openwaldo/lookaside/7c/c5/7cc5e838a55da8b11afb03e33687d57febe48776501231e77196ac3dfa1842da
+    sha256: 7cc5e838a55da8b11afb03e33687d57febe48776501231e77196ac3dfa1842da
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12927
+        tokens: 267876691
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 659
+        tokens: 12963710
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 476
+        tokens: 10529449
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14062
+    tokens: 291369850
+    bytes: 283301725
+  - url: s3://openwaldo/lookaside/26/5f/265f1cc144d1de8cafb82ea32056faeb4a7b6385b9d396f6ad588b08e14cdc56
+    sha256: 265f1cc144d1de8cafb82ea32056faeb4a7b6385b9d396f6ad588b08e14cdc56
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 13035
+        tokens: 272348008
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 659
+        tokens: 12050846
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 477
+        tokens: 9652424
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14171
+    tokens: 294051278
+    bytes: 282595846
+  - url: s3://openwaldo/lookaside/89/70/89707d21e918acc5c91c30e46cc6c0d6e381b1075fe2e44dee6ace2360712135
+    sha256: 89707d21e918acc5c91c30e46cc6c0d6e381b1075fe2e44dee6ace2360712135
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12943
+        tokens: 267346844
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 697
+        tokens: 13613497
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 456
+        tokens: 9073290
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14096
+    tokens: 290033631
+    bytes: 284036010
+  - url: s3://openwaldo/lookaside/62/c7/62c73b43e7afc6399636c52ccf5d07b993303d96f450a7135a508048e8bec449
+    sha256: 62c73b43e7afc6399636c52ccf5d07b993303d96f450a7135a508048e8bec449
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12901
+        tokens: 272915433
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 626
+        tokens: 11240922
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 435
+        tokens: 9130661
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13962
+    tokens: 293287016
+    bytes: 282495223
+  - url: s3://openwaldo/lookaside/7e/d5/7ed53ad391115206a343158ae69c3066839c7eac3b093c18067842f1a9796a34
+    sha256: 7ed53ad391115206a343158ae69c3066839c7eac3b093c18067842f1a9796a34
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12488
+        tokens: 269250814
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 627
+        tokens: 12230975
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 448
+        tokens: 9985379
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13563
+    tokens: 291467168
+    bytes: 282100170
+  - url: s3://openwaldo/lookaside/39/bd/39bd6d5d5f0836d6490c7883e82f50f81c900dd1da3d830e60668a81d1514814
+    sha256: 39bd6d5d5f0836d6490c7883e82f50f81c900dd1da3d830e60668a81d1514814
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12992
+        tokens: 270104013
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 673
+        tokens: 12280993
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 388
+        tokens: 7305604
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 14053
+    tokens: 289690610
+    bytes: 285001143
+  - url: s3://openwaldo/lookaside/a1/c8/a1c8969ddad076cd2d2b8f55d818cb0e0b3292c489c7d8e80251ffc7915ce019
+    sha256: a1c8969ddad076cd2d2b8f55d818cb0e0b3292c489c7d8e80251ffc7915ce019
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 12688
+        tokens: 269652558
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 647
+        tokens: 12849638
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 370
+        tokens: 7481128
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 13705
+    tokens: 289983324
+    bytes: 283797280
+  - url: s3://openwaldo/lookaside/99/80/9980d8cb38720dfb8d3f7e69c5dc45b36d4526a3636a5994086e8387b963860f
+    sha256: 9980d8cb38720dfb8d3f7e69c5dc45b36d4526a3636a5994086e8387b963860f
+    licenses:
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+      - LicenseRef-Public-Domain
+    license_usage:
+      CC-BY-3.0:
+        shards: 0
+        docs: 24
+        tokens: 667203
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 9826
+        tokens: 201656997
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 487
+        tokens: 8653800
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 283
+        tokens: 5677737
+        bytes: 0
+      LicenseRef-Public-Domain:
+        shards: 0
+        docs: 4
+        tokens: 172170
+        bytes: 0
+    sources:
+      - common-pile/arxiv_papers_filtered
+    docs: 10624
+    tokens: 216827907
+    bytes: 214491086
+
