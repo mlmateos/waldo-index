@@ -4,6 +4,8 @@ path: core/common-pile
 entries:
   - name: foodista
     type: dir
+  - name: oercommons
+    type: dir
   - name: public-domain-review
     type: dir
   - name: python-enhancement-proposals

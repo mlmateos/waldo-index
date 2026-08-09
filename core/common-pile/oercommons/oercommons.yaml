@@ -1,0 +1,65 @@
+kind: manifest
+schema: 2
+name: oercommons
+title: OER Commons
+description: Open educational resources from OER Commons, via the filtered Common Pile release.
+licenses:
+  - CC-BY-4.0
+  - CC-BY-SA-4.0
+  - LicenseRef-Public-Domain
+sources:
+  - name: common-pile/oercommons_filtered
+    source: common-pile/oercommons_filtered
+    version: 506b6159dadcbc0dc67611cea024eedb04232fb2
+    license: LicenseRef-Mixed
+    license_evidence:
+      url: https://huggingface.co/datasets/common-pile/oercommons_filtered/blob/506b6159dadcbc0dc67611cea024eedb04232fb2/README.md
+    url: https://huggingface.co/datasets/common-pile/oercommons_filtered
+    category: public-dataset
+    sha256: 032b10f84e0dcf6a5d72a25b1c57cd6c05d0475e0503736ed93bfc19237b4291
+    content:
+      types:
+        - open educational resources
+      languages:
+        - en
+      selection: All gzip JSONL artifacts at the pinned filtered Common Pile revision.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Public dataset release at the pinned revision.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@0e132ba9a7c0bc5e21f7997d3a99938209af6ce2:recipes/education/oercommons.yaml
+  profile: canonical-text-schema-1@sha256:6a41e81fdfe7fdb4d3a190324220b97f81e4a5f56848ccba49c7787383e16146
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/4d/f4/4df4cde0f66e157a8bba4100ee01b96d81170deec34c803fa0e760703809e5ad
+    sha256: 4df4cde0f66e157a8bba4100ee01b96d81170deec34c803fa0e760703809e5ad
+    licenses:
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - LicenseRef-Public-Domain
+    license_usage:
+      CC-BY-4.0:
+        shards: 0
+        docs: 4612
+        tokens: 9881383
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 424
+        tokens: 687004
+        bytes: 0
+      LicenseRef-Public-Domain:
+        shards: 0
+        docs: 208
+        tokens: 250765
+        bytes: 0
+    sources:
+      - common-pile/oercommons_filtered
+    docs: 5244
+    tokens: 10819152
+    bytes: 16167550
