@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/linux-kernel-mailing-list
+entries:
+  - name: linux-kernel-mailing-list.yaml
+    type: manifest
