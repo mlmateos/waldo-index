@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: core/common-pile/data-provenance-initiative
+entries:
+  - name: data-provenance-initiative.yaml
+    type: manifest

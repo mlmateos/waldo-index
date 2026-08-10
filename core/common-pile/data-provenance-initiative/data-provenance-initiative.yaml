@@ -1,0 +1,506 @@
+kind: manifest
+schema: 2
+name: data-provenance-initiative
+title: Data Provenance Initiative
+description: Openly licensed English and code datasets audited by the Data Provenance Initiative, via the filtered Common Pile release.
+licenses:
+  - Apache-2.0
+  - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0 AND ISC AND MIT
+  - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT
+  - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND MIT
+  - Apache-2.0 AND BSD-2-Clause AND MIT
+  - Apache-2.0 AND BSD-3-Clause
+  - Apache-2.0 AND BSD-3-Clause AND CC0-1.0 AND MIT
+  - Apache-2.0 AND BSD-3-Clause AND MIT
+  - Apache-2.0 AND CC-BY-3.0
+  - Apache-2.0 AND CC-BY-4.0
+  - Apache-2.0 AND CC-BY-SA-3.0
+  - Apache-2.0 AND CC-BY-SA-4.0
+  - Apache-2.0 AND CC0-1.0
+  - Apache-2.0 AND CC0-1.0 AND MIT
+  - Apache-2.0 AND CDLA-Permissive-1.0
+  - Apache-2.0 AND MIT
+  - BSD-2-Clause
+  - BSD-2-Clause AND BSD-3-Clause AND MIT
+  - BSD-2-Clause AND CC0-1.0 AND MIT
+  - BSD-2-Clause AND ISC AND MIT
+  - BSD-2-Clause AND MIT
+  - BSD-3-Clause
+  - BSD-3-Clause AND MIT
+  - CC-BY-3.0
+  - CC-BY-4.0
+  - CC-BY-4.0 AND MIT
+  - CC-BY-SA-3.0
+  - CC-BY-SA-3.0 AND MIT
+  - CC-BY-SA-4.0
+  - CC-BY-SA-4.0 AND MIT
+  - CC0-1.0
+  - CC0-1.0 AND MIT
+  - ISC AND MIT
+  - MIT
+sources:
+  - name: common-pile/data_provenance_initiative_filtered
+    source: common-pile/data_provenance_initiative_filtered
+    version: 8f5afcf585e4618ff12f5b6d49cb5242faf5afbd
+    license: LicenseRef-Mixed
+    license_evidence:
+      url: https://huggingface.co/datasets/common-pile/data_provenance_initiative_filtered/blob/8f5afcf585e4618ff12f5b6d49cb5242faf5afbd/README.md
+    url: https://huggingface.co/datasets/common-pile/data_provenance_initiative_filtered
+    category: public-dataset
+    sha256: ad9f3db403f0af544de6112f32c98b579205fa87d2b0b2aacebab4cfa9106382
+    content:
+      types:
+        - datasets
+        - developer data
+        - question answering
+      languages:
+        - en
+      selection: All three gzip JSONL artifacts at the pinned filtered Common Pile revision; all 3,508,390 records retain an original dataset identifier and URL. Each upstream license array is preserved and represented conservatively as a deterministic conjunction of its normalized terms.
+      copyrighted: yes
+      machine_generated: no
+    acquisition:
+      basis: Public filtered release derived from the Data Provenance Initiative audit, with per-record original-source and license evidence.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@b567abd88fc199741befad4f7176c0e73d28b027:recipes/common-pile/data-provenance-initiative.yaml#sha256=65baca6ff4a729a30a8c932da92017a4cdb78219a9c73eff18bf4c4093c43084
+  profile: canonical-text-schema-1@sha256:45d9c33653fd209944dceb3e2e53e34b14e8ba5803627d54bc7c95380d844257
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/01/42/0142b006eaf1d311a3c4e71653f7b4bbc702f9d44f682bbe6bf55416fe0097ac
+    sha256: 0142b006eaf1d311a3c4e71653f7b4bbc702f9d44f682bbe6bf55416fe0097ac
+    licenses:
+      - Apache-2.0
+      - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0 AND ISC AND MIT
+      - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT
+      - Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND MIT
+      - Apache-2.0 AND BSD-2-Clause AND MIT
+      - Apache-2.0 AND BSD-3-Clause
+      - Apache-2.0 AND BSD-3-Clause AND CC0-1.0 AND MIT
+      - Apache-2.0 AND BSD-3-Clause AND MIT
+      - Apache-2.0 AND CC-BY-4.0
+      - Apache-2.0 AND CC-BY-SA-3.0
+      - Apache-2.0 AND CC-BY-SA-4.0
+      - Apache-2.0 AND CC0-1.0
+      - Apache-2.0 AND CC0-1.0 AND MIT
+      - Apache-2.0 AND MIT
+      - BSD-2-Clause
+      - BSD-2-Clause AND BSD-3-Clause AND MIT
+      - BSD-2-Clause AND CC0-1.0 AND MIT
+      - BSD-2-Clause AND ISC AND MIT
+      - BSD-2-Clause AND MIT
+      - BSD-3-Clause AND MIT
+      - CC-BY-4.0
+      - CC-BY-SA-3.0
+      - CC-BY-SA-4.0
+      - CC-BY-SA-4.0 AND MIT
+      - CC0-1.0 AND MIT
+      - ISC AND MIT
+      - MIT
+    license_usage:
+      Apache-2.0:
+        shards: 0
+        docs: 99053
+        tokens: 16911335
+        bytes: 0
+      Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0 AND ISC AND MIT:
+        shards: 0
+        docs: 101
+        tokens: 34267
+        bytes: 0
+      Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT:
+        shards: 0
+        docs: 19
+        tokens: 5422
+        bytes: 0
+      Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND MIT:
+        shards: 0
+        docs: 761
+        tokens: 278790
+        bytes: 0
+      Apache-2.0 AND BSD-2-Clause AND MIT:
+        shards: 0
+        docs: 2
+        tokens: 1287
+        bytes: 0
+      Apache-2.0 AND BSD-3-Clause:
+        shards: 0
+        docs: 56201
+        tokens: 1157410
+        bytes: 0
+      Apache-2.0 AND BSD-3-Clause AND CC0-1.0 AND MIT:
+        shards: 0
+        docs: 22
+        tokens: 6015
+        bytes: 0
+      Apache-2.0 AND BSD-3-Clause AND MIT:
+        shards: 0
+        docs: 180
+        tokens: 69272
+        bytes: 0
+      Apache-2.0 AND CC-BY-4.0:
+        shards: 0
+        docs: 32866
+        tokens: 7345537
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-3.0:
+        shards: 0
+        docs: 119876
+        tokens: 19149304
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-4.0:
+        shards: 0
+        docs: 50776
+        tokens: 2388357
+        bytes: 0
+      Apache-2.0 AND CC0-1.0:
+        shards: 0
+        docs: 220
+        tokens: 65834
+        bytes: 0
+      Apache-2.0 AND CC0-1.0 AND MIT:
+        shards: 0
+        docs: 37
+        tokens: 14625
+        bytes: 0
+      Apache-2.0 AND MIT:
+        shards: 0
+        docs: 261792
+        tokens: 36808371
+        bytes: 0
+      BSD-2-Clause:
+        shards: 0
+        docs: 900
+        tokens: 38366
+        bytes: 0
+      BSD-2-Clause AND BSD-3-Clause AND MIT:
+        shards: 0
+        docs: 66
+        tokens: 30192
+        bytes: 0
+      BSD-2-Clause AND CC0-1.0 AND MIT:
+        shards: 0
+        docs: 21
+        tokens: 9302
+        bytes: 0
+      BSD-2-Clause AND ISC AND MIT:
+        shards: 0
+        docs: 3
+        tokens: 1597
+        bytes: 0
+      BSD-2-Clause AND MIT:
+        shards: 0
+        docs: 27
+        tokens: 12621
+        bytes: 0
+      BSD-3-Clause AND MIT:
+        shards: 0
+        docs: 53
+        tokens: 19120
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 75905
+        tokens: 17560417
+        bytes: 0
+      CC-BY-SA-3.0:
+        shards: 0
+        docs: 19972
+        tokens: 3446586
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 194602
+        tokens: 38703319
+        bytes: 0
+      CC-BY-SA-4.0 AND MIT:
+        shards: 0
+        docs: 106195
+        tokens: 23447805
+        bytes: 0
+      CC0-1.0 AND MIT:
+        shards: 0
+        docs: 1
+        tokens: 242
+        bytes: 0
+      ISC AND MIT:
+        shards: 0
+        docs: 7
+        tokens: 2709
+        bytes: 0
+      MIT:
+        shards: 0
+        docs: 204843
+        tokens: 28503232
+        bytes: 0
+    sources:
+      - common-pile/data_provenance_initiative_filtered
+    docs: 1224501
+    tokens: 196011334
+    bytes: 270632434
+  - url: s3://openwaldo/lookaside/4a/b6/4ab6a219fdc42c050715ee39aee9175c677ad6298fbe591fb0a9afd2de36dd97
+    sha256: 4ab6a219fdc42c050715ee39aee9175c677ad6298fbe591fb0a9afd2de36dd97
+    licenses:
+      - Apache-2.0
+      - Apache-2.0 AND CC-BY-3.0
+      - Apache-2.0 AND CC-BY-4.0
+      - Apache-2.0 AND CC-BY-SA-3.0
+      - Apache-2.0 AND CC-BY-SA-4.0
+      - Apache-2.0 AND CC0-1.0
+      - Apache-2.0 AND CDLA-Permissive-1.0
+      - Apache-2.0 AND MIT
+      - BSD-2-Clause
+      - CC-BY-4.0
+      - CC-BY-4.0 AND MIT
+      - CC-BY-SA-3.0
+      - CC-BY-SA-3.0 AND MIT
+      - CC-BY-SA-4.0
+      - CC0-1.0
+      - MIT
+    license_usage:
+      Apache-2.0:
+        shards: 0
+        docs: 382101
+        tokens: 49732378
+        bytes: 0
+      Apache-2.0 AND CC-BY-3.0:
+        shards: 0
+        docs: 1000
+        tokens: 13206
+        bytes: 0
+      Apache-2.0 AND CC-BY-4.0:
+        shards: 0
+        docs: 72660
+        tokens: 12376954
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-3.0:
+        shards: 0
+        docs: 176417
+        tokens: 80069865
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-4.0:
+        shards: 0
+        docs: 90250
+        tokens: 6470835
+        bytes: 0
+      Apache-2.0 AND CC0-1.0:
+        shards: 0
+        docs: 879
+        tokens: 249843
+        bytes: 0
+      Apache-2.0 AND CDLA-Permissive-1.0:
+        shards: 0
+        docs: 59447
+        tokens: 12223993
+        bytes: 0
+      Apache-2.0 AND MIT:
+        shards: 0
+        docs: 65316
+        tokens: 12810565
+        bytes: 0
+      BSD-2-Clause:
+        shards: 0
+        docs: 1722
+        tokens: 427770
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 61252
+        tokens: 19944433
+        bytes: 0
+      CC-BY-4.0 AND MIT:
+        shards: 0
+        docs: 12916
+        tokens: 1214252
+        bytes: 0
+      CC-BY-SA-3.0:
+        shards: 0
+        docs: 16395
+        tokens: 15403248
+        bytes: 0
+      CC-BY-SA-3.0 AND MIT:
+        shards: 0
+        docs: 274
+        tokens: 38776
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 56605
+        tokens: 12021974
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 12062
+        tokens: 1832560
+        bytes: 0
+      MIT:
+        shards: 0
+        docs: 30753
+        tokens: 10755179
+        bytes: 0
+    sources:
+      - common-pile/data_provenance_initiative_filtered
+    docs: 1040049
+    tokens: 235585831
+    bytes: 284277857
+  - url: s3://openwaldo/lookaside/d4/be/d4bea01fa4dda1a4ffb7865f7a9594742b88134633d805535d807e996c1241c6
+    sha256: d4bea01fa4dda1a4ffb7865f7a9594742b88134633d805535d807e996c1241c6
+    licenses:
+      - Apache-2.0
+      - Apache-2.0 AND CC-BY-4.0
+      - Apache-2.0 AND CC-BY-SA-3.0
+      - Apache-2.0 AND CC-BY-SA-4.0
+      - BSD-3-Clause
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-3.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      Apache-2.0:
+        shards: 0
+        docs: 288435
+        tokens: 9280432
+        bytes: 0
+      Apache-2.0 AND CC-BY-4.0:
+        shards: 0
+        docs: 11754
+        tokens: 1498872
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-3.0:
+        shards: 0
+        docs: 106135
+        tokens: 51699618
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-4.0:
+        shards: 0
+        docs: 54295
+        tokens: 8911651
+        bytes: 0
+      BSD-3-Clause:
+        shards: 0
+        docs: 37775
+        tokens: 7239844
+        bytes: 0
+      CC-BY-3.0:
+        shards: 0
+        docs: 4948
+        tokens: 5824740
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 28545
+        tokens: 16931180
+        bytes: 0
+      CC-BY-SA-3.0:
+        shards: 0
+        docs: 101010
+        tokens: 79706498
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 20453
+        tokens: 9227127
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 16631
+        tokens: 2966090
+        bytes: 0
+    sources:
+      - common-pile/data_provenance_initiative_filtered
+    docs: 669981
+    tokens: 193286052
+    bytes: 271771850
+  - url: s3://openwaldo/lookaside/d7/34/d734eba0cb5d8fbf473429c22d75d536636cec2cb72b15416b0b64904b832b86
+    sha256: d734eba0cb5d8fbf473429c22d75d536636cec2cb72b15416b0b64904b832b86
+    licenses:
+      - Apache-2.0 AND CC-BY-4.0
+      - Apache-2.0 AND CC-BY-SA-3.0
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      Apache-2.0 AND CC-BY-4.0:
+        shards: 0
+        docs: 81658
+        tokens: 8587896
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-3.0:
+        shards: 0
+        docs: 51195
+        tokens: 3259414
+        bytes: 0
+      CC-BY-3.0:
+        shards: 0
+        docs: 33776
+        tokens: 40493410
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 22393
+        tokens: 19638318
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 148883
+        tokens: 70003904
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 118782
+        tokens: 21141794
+        bytes: 0
+    sources:
+      - common-pile/data_provenance_initiative_filtered
+    docs: 456687
+    tokens: 163124736
+    bytes: 276421726
+  - url: s3://openwaldo/lookaside/c4/bf/c4bf88a6f6f26c001f9a6220c5801a9dc2d018b41615d240f6f1486829a381c7
+    sha256: c4bf88a6f6f26c001f9a6220c5801a9dc2d018b41615d240f6f1486829a381c7
+    licenses:
+      - Apache-2.0 AND CC-BY-4.0
+      - Apache-2.0 AND CC-BY-SA-3.0
+      - CC-BY-3.0
+      - CC-BY-4.0
+      - CC-BY-SA-4.0
+      - CC0-1.0
+    license_usage:
+      Apache-2.0 AND CC-BY-4.0:
+        shards: 0
+        docs: 15059
+        tokens: 1567049
+        bytes: 0
+      Apache-2.0 AND CC-BY-SA-3.0:
+        shards: 0
+        docs: 9597
+        tokens: 615999
+        bytes: 0
+      CC-BY-3.0:
+        shards: 0
+        docs: 5750
+        tokens: 6958681
+        bytes: 0
+      CC-BY-4.0:
+        shards: 0
+        docs: 2849
+        tokens: 2368567
+        bytes: 0
+      CC-BY-SA-4.0:
+        shards: 0
+        docs: 25926
+        tokens: 11427946
+        bytes: 0
+      CC0-1.0:
+        shards: 0
+        docs: 21652
+        tokens: 3870364
+        bytes: 0
+    sources:
+      - common-pile/data_provenance_initiative_filtered
+    docs: 80833
+    tokens: 26808606
+    bytes: 45595910
