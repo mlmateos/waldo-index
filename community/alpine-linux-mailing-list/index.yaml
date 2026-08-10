@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/alpine-linux-mailing-list
+entries:
+  - name: alpine-linux-mailing-list.yaml
+    type: manifest

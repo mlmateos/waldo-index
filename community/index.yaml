@@ -2,6 +2,8 @@ kind: index
 schema: 1
 path: community
 entries:
+  - name: alpine-linux-mailing-list
+    type: dir
   - name: apache-mailing-lists
     type: dir
   - name: gcc-mailing-lists

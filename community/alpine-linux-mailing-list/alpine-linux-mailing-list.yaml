@@ -1,0 +1,55 @@
+kind: manifest
+schema: 2
+name: alpine-linux-mailing-list
+title: Alpine Linux Development Mailing List
+description: Canonicalized complete public Alpine Linux development-list archive from the official bulk mbox export.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: alpine-devel@lists.alpinelinux.org
+    source: alpine-devel@lists.alpinelinux.org
+    version: 2006-2026-snapshot-2026-08-10
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Alpine identifies this as its public development mailing list and the official archive explicitly offers the entire list as an mbox export; no blanket content license is asserted for individual messages.
+      url: https://lists.alpinelinux.org/~alpine/devel
+    url: https://lists.alpinelinux.org/~alpine/devel
+    category: public-dataset
+    sha256: 89b783b9e10742f1beac8230c0eea8d867d410d866c9e398736832dc44f8d566
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - source code discussion
+        - user support
+      languages:
+        - en
+      from: "2006-01-17"
+      to: "2026-07-27"
+      selection: All 8,206 messages in the complete official archive export qualified on 2026-08-10. Transport-generated mbox envelope timestamps are canonicalized and removed while each byte-exact RFC 822 message is emitted as one training input.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official whole-list mbox export independently retrieved twice and pinned by the identical SHA-256 of its narrowly canonicalized payload.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@10ee8e7e3c5918b67f81a18ab7edae1241279e9b:recipes/community/alpine-linux-mailing-list.yaml#sha256=3f07a42a201025f007483d5174a7d9c1ad33daa6a074e63307b2460efd2a5554
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/54/56/54564fb990f316abc5c822fbb84bc0d246393a75e6ad550c785e7c3e3a8e454a
+    sha256: 54564fb990f316abc5c822fbb84bc0d246393a75e6ad550c785e7c3e3a8e454a
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 8206
+        tokens: 21811688
+        bytes: 0
+    sources:
+      - alpine-devel@lists.alpinelinux.org
+    docs: 8206
+    tokens: 21811688
+    bytes: 15788432
