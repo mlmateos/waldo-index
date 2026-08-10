@@ -1,0 +1,80 @@
+kind: manifest
+schema: 2
+name: gcc-mailing-lists
+title: GCC Development and Help Mailing Lists
+description: Calendar-year 2025 GCC development, patch review, and user-help messages from the official Sourceware public archives.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: gcc@gcc.gnu.org
+    source: gcc@gcc.gnu.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Sourceware operates this official public mailing-list archive with a public-inbox Git export; no blanket content license is asserted for individual messages.
+      url: https://inbox.sourceware.org/gcc/
+    url: https://inbox.sourceware.org/gcc/
+    category: public-dataset
+    sha256: 61eb9be132d9cb6e21e71b71c265f20e18a821d4d16442e5aa15dabeb3e30565
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - patches
+        - source code review
+      languages:
+        - en
+      from: "2025-01-01"
+      to: "2025-12-31"
+      selection: Every message commit whose author timestamp falls in calendar year 2025 from pinned public-inbox epoch 0; raw RFC 822 message blobs are retained in deterministic 64 MiB text chunks and archive tombstones are warned and ignored.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Sourceware public-inbox Git epoch fetched by immutable object ID and streamed without per-message subprocesses.
+  - name: gcc-help@gcc.gnu.org
+    source: gcc-help@gcc.gnu.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Sourceware operates this official public mailing-list archive with a public-inbox Git export; no blanket content license is asserted for individual messages.
+      url: https://inbox.sourceware.org/gcc-help/
+    url: https://inbox.sourceware.org/gcc-help/
+    category: public-dataset
+    sha256: 98c878515dd47cb9024acdd558ce335db2dedc1e87c8140d697fa20ea0e7f826
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - user help
+      languages:
+        - en
+      from: "2025-01-01"
+      to: "2025-12-31"
+      selection: Every message commit whose author timestamp falls in calendar year 2025 from pinned public-inbox epoch 0; raw RFC 822 message blobs are retained in deterministic 64 MiB text chunks and archive tombstones are warned and ignored.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Sourceware public-inbox Git epoch fetched by immutable object ID and streamed without per-message subprocesses.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@e3e63c5:recipes/community/gcc-mailing-lists.yaml#sha256=fd2119842ca77848c7303c9605292eab4532d6776e268938ed4ac509a01853df
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/ad/11/ad115eebd17f1e4d424fb6df6e49b053508bcae2fc4b2aa1fe16ece06194b52b
+    sha256: ad115eebd17f1e4d424fb6df6e49b053508bcae2fc4b2aa1fe16ece06194b52b
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 444
+        tokens: 112105019
+        bytes: 0
+    sources:
+      - gcc-help@gcc.gnu.org
+      - gcc@gcc.gnu.org
+    docs: 444
+    tokens: 112105019
+    bytes: 97349181

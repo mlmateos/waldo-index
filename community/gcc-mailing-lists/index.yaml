@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/gcc-mailing-lists
+entries:
+  - name: gcc-mailing-lists.yaml
+    type: manifest
