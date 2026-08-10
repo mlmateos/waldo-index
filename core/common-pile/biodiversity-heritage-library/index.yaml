@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: core/common-pile/biodiversity-heritage-library
+entries:
+  - name: biodiversity-heritage-library.yaml
+    type: manifest

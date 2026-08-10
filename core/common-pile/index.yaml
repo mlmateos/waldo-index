@@ -2,6 +2,8 @@ kind: index
 schema: 1
 path: core/common-pile
 entries:
+  - name: biodiversity-heritage-library
+    type: dir
   - name: data-provenance-initiative
     type: dir
   - name: foodista
