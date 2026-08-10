@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/glibc-mailing-lists
+entries:
+  - name: glibc-mailing-lists.yaml
+    type: manifest

@@ -1,0 +1,81 @@
+kind: manifest
+schema: 2
+name: glibc-mailing-lists
+title: glibc Development and Help Mailing Lists
+description: Calendar-year 2025 glibc development, patch review, and user-help messages from the official Sourceware public archives.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: libc-alpha@sourceware.org
+    source: libc-alpha@sourceware.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Sourceware operates this official public mailing-list archive with a public-inbox Git export; no blanket content license is asserted for individual messages.
+      url: https://inbox.sourceware.org/libc-alpha/
+    url: https://inbox.sourceware.org/libc-alpha/
+    category: public-dataset
+    sha256: 85c01130e7e9aaab4c1a707a4b6b5e0e5fa2b323ddcef71fe22e48b5b116a932
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - patches
+        - source code review
+      languages:
+        - en
+      from: "2025-01-01"
+      to: "2025-12-31"
+      selection: Every message commit whose author timestamp falls in calendar year 2025 from pinned public-inbox epoch 0; raw RFC 822 message blobs are retained in deterministic 64 MiB text chunks and archive tombstones are warned and ignored.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Sourceware public-inbox Git epoch fetched by immutable object ID and streamed without per-message subprocesses.
+  - name: libc-help@sourceware.org
+    source: libc-help@sourceware.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Sourceware operates this official public mailing-list archive with a public-inbox Git export; no blanket content license is asserted for individual messages.
+      url: https://inbox.sourceware.org/libc-help/
+    url: https://inbox.sourceware.org/libc-help/
+    category: public-dataset
+    sha256: 352b1a4a9a038793b03c1cab0bbb0d08a83d30e5d217076993004da1366f6b2a
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - user help
+      languages:
+        - en
+      from: "2025-01-01"
+      to: "2025-12-31"
+      selection: Every message commit whose author timestamp falls in calendar year 2025 from pinned public-inbox epoch 0; raw RFC 822 message blobs are retained in deterministic 64 MiB text chunks and archive tombstones are warned and ignored.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official Sourceware public-inbox Git epoch fetched by immutable object ID and streamed without per-message subprocesses.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@998a210:recipes/community/glibc-mailing-lists.yaml#sha256=1e1dcb204219003ff786b9665d97dbb694deaa99fd7de12baf16a7dfab511928
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/66/6c/666c2c4c5ac6bfe89d9d14c8967ab77487f17e53d3915ce29301c400cee793c1
+    sha256: 666c2c4c5ac6bfe89d9d14c8967ab77487f17e53d3915ce29301c400cee793c1
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 718
+        tokens: 178590893
+        bytes: 0
+    sources:
+      - libc-alpha@sourceware.org
+      - libc-help@sourceware.org
+    docs: 718
+    tokens: 178590893
+    bytes: 70834445
+

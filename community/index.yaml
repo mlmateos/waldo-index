@@ -8,6 +8,8 @@ entries:
     type: dir
   - name: git-mailing-list
     type: dir
+  - name: glibc-mailing-lists
+    type: dir
   - name: linux-kernel-mailing-list
     type: dir
   - name: opensource-mailing-lists
