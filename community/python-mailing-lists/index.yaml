@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/python-mailing-lists
+entries:
+  - name: python-mailing-lists.yaml
+    type: manifest

@@ -1,0 +1,104 @@
+kind: manifest
+schema: 2
+name: python-mailing-lists
+title: Python Community Mailing Lists
+description: Checksum-pinned Python development, user, and learning-support discussions from official monthly HyperKitty mbox exports.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: python-list@python.org
+    source: python-list@python.org
+    version: 2015-01..2025-12
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Python.org identifies python-list as a public community mailing list and publishes its archive and bulk mbox exports; no blanket content license is asserted for individual messages.
+      url: https://www.python.org/community/lists/
+    url: https://mail.python.org/archives/list/python-list@python.org/
+    category: public-dataset
+    sha256: 58d86897374bc3b0052b95593b3c1e9fe8b42b7e72e741f3c1f4c3d47f3007d2
+    content:
+      types:
+        - mailing list
+        - technical discussion
+        - user support
+      languages:
+        - en
+      from: 2015-01
+      to: 2025-12
+      selection: All 132 official date-bounded monthly exports from 2015 through 2025, split into individual RFC 822 messages after narrow deterministic MIME-boundary canonicalization.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official unauthenticated monthly HyperKitty mbox exports, each pinned by canonical SHA-256 and message count in a checksum-pinned manifest.
+  - name: tutor@python.org
+    source: tutor@python.org
+    version: 2015-01..2025-12
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Python.org identifies tutor as a public learning and support mailing list and publishes its archive and bulk mbox exports; no blanket content license is asserted for individual messages.
+      url: https://www.python.org/community/lists/
+    url: https://mail.python.org/archives/list/tutor@python.org/
+    category: public-dataset
+    sha256: 3d09adb4a03571d4c20467a58f464580ac8a861ab71135ce6262e6ebf39cb3aa
+    content:
+      types:
+        - mailing list
+        - programming education
+        - user support
+      languages:
+        - en
+      from: 2015-01
+      to: 2025-12
+      selection: All 132 official date-bounded monthly exports from 2015 through 2025, split into individual RFC 822 messages after narrow deterministic MIME-boundary canonicalization.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official unauthenticated monthly HyperKitty mbox exports, each pinned by canonical SHA-256 and message count in a checksum-pinned manifest.
+  - name: python-dev@python.org
+    source: python-dev@python.org
+    version: 2015-01..2022-12
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Python.org identifies python-dev as a public core-development mailing list and publishes its archive and bulk mbox exports; no blanket content license is asserted for individual messages.
+      url: https://www.python.org/community/lists/
+    url: https://mail.python.org/archives/list/python-dev@python.org/
+    category: public-dataset
+    sha256: b4cb19435486990692dfae8ff0f67f0ed9acd0a4badd253290b61514ae704b2e
+    content:
+      types:
+        - developer communications
+        - language design
+        - mailing list
+      languages:
+        - en
+      from: 2015-01
+      to: 2022-12
+      selection: All 96 official date-bounded monthly exports from 2015 through the list's 2022 migration, split into individual RFC 822 messages after narrow deterministic MIME-boundary canonicalization.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official unauthenticated monthly HyperKitty mbox exports, each pinned by canonical SHA-256 and message count in a checksum-pinned manifest.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@32e1d24496b777f954f3125d7c120e286ca5b70f:recipes/community/python-mailing-lists.yaml#sha256=148b2582ca216d9281987b0eebad6b9d93f2f2a584b12f02854a4a793ab2a7ea
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/3a/25/3a25b0e3c3a0223479a62871d04c583b8bb34f405d57af57a170259081949cc6
+    sha256: 3a25b0e3c3a0223479a62871d04c583b8bb34f405d57af57a170259081949cc6
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 128485
+        tokens: 140127647
+        bytes: 0
+    sources:
+      - python-dev@python.org
+      - python-list@python.org
+      - tutor@python.org
+    docs: 128485
+    tokens: 140127647
+    bytes: 107638030
