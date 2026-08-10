@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: code/copyleft/linux-core
+entries:
+  - name: linux-core.yaml
+    type: manifest

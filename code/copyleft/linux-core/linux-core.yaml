@@ -1,0 +1,534 @@
+kind: manifest
+schema: 2
+name: linux-core
+title: Linux Core — Copyleft
+description: Pinned copyleft source for the Linux kernel and foundational GNU/Linux toolchain, boot, module, networking, filesystem, and process projects not already represented in code/copyleft.
+licenses:
+  - GPL-2.0-only
+  - GPL-2.0-or-later
+  - GPL-2.0-or-later AND LGPL-2.1-or-later
+  - GPL-3.0-or-later
+  - LGPL-2.1-or-later
+sources:
+  - name: linux/kernel
+    source: linux/kernel
+    version: 038d61fd642278bab63ee8ef722c50d10ab01e8f
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/COPYING?id=038d61fd642278bab63ee8ef722c50d10ab01e8f
+    url: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+    category: public-dataset
+    sha256: c6ca4ccd95de39b5fca4fc9c60125ab0fafbe1bda2c7909b5faa905202d1bd41
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+        - Rust
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official Linux kernel Git repository at the pinned v6.16 commit.
+  - name: kernel/kmod
+    source: kernel/kmod
+    version: 13330c958deef15c227a9c83d8ba72106152fd7f
+    license: GPL-2.0-or-later AND LGPL-2.1-or-later
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git/tree/COPYING?id=13330c958deef15c227a9c83d8ba72106152fd7f
+    url: https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git
+    category: public-dataset
+    sha256: 3556abef46dc15343e58d4112ec271ea43f5829756e5267f6edd7e87986e8f2a
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile; library and utility licensing remains identified by upstream file headers.
+      copyrighted: yes
+    acquisition:
+      basis: Official kmod Git repository at the pinned v34.2 commit.
+  - name: kernel/iproute2
+    source: kernel/iproute2
+    version: 915d3eafcc19706c27b220134b25c24a5b9913b3
+    license: GPL-2.0-or-later
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/COPYING?id=915d3eafcc19706c27b220134b25c24a5b9913b3
+    url: https://git.kernel.org/pub/scm/network/iproute2/iproute2.git
+    category: public-dataset
+    sha256: cf7472fe2a11c230bde2d3db85a59d2ed5e63812f24ffd01b3c522cf549f04f2
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official iproute2 Git repository at the pinned v6.16.0 commit.
+  - name: netfilter/nftables
+    source: netfilter/nftables
+    version: 5fb748243550f857bb82cddcdce642f8bf269026
+    license: GPL-2.0-or-later
+    license_evidence:
+      url: https://git.netfilter.org/nftables/tree/COPYING?id=5fb748243550f857bb82cddcdce642f8bf269026
+    url: https://git.netfilter.org/nftables
+    category: public-dataset
+    sha256: f58edc107dd7d0eb04e8663db6dcc8ffc0d54cd219252520c6c1221effa6ff38
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official Netfilter Git repository at the pinned v1.1.5 commit.
+  - name: netfilter/iptables
+    source: netfilter/iptables
+    version: 0506bea1dcc8f12d94e7c32bf2fb04abb3fdd269
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.netfilter.org/iptables/tree/COPYING?id=0506bea1dcc8f12d94e7c32bf2fb04abb3fdd269
+    url: https://git.netfilter.org/iptables
+    category: public-dataset
+    sha256: ac7985d41014756aab85e233d225680290ff86cc693354fcc9a53b5ec6a7b82d
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official Netfilter Git repository at the pinned v1.8.11 commit.
+  - name: kernel/btrfs-progs
+    source: kernel/btrfs-progs
+    version: 54694de98fdc4ea5678cdd77b920c044bbf64f26
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git/tree/COPYING?id=54694de98fdc4ea5678cdd77b920c044bbf64f26
+    url: https://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git
+    category: public-dataset
+    sha256: da5ea9a9553f3526de9b503c4d07f8f7e90a7024758b12fad4ab607f4257b65c
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official btrfs-progs Git repository at the pinned v6.16 commit.
+  - name: kernel/xfsprogs
+    source: kernel/xfsprogs
+    version: 1d287f3d958ebc425275d6a08ad6977e13e52fac
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/fs/xfs/xfsprogs-dev.git/tree/LICENSES/GPL-2.0?id=1d287f3d958ebc425275d6a08ad6977e13e52fac
+    url: https://git.kernel.org/pub/scm/fs/xfs/xfsprogs-dev.git
+    category: public-dataset
+    sha256: fe39af707b4e70f443a1878a498b8a28fefeb5a56d700fb0005fa8ea66c0eb2d
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official xfsprogs Git repository at the pinned v6.16.0 commit.
+  - name: busybox/busybox
+    source: busybox/busybox
+    version: be7d1b7b1701d225379bc1665487ed0871b592a5
+    license: GPL-2.0-only
+    license_evidence:
+      url: https://git.busybox.net/busybox/tree/LICENSE?id=be7d1b7b1701d225379bc1665487ed0871b592a5
+    url: https://git.busybox.net/busybox
+    category: public-dataset
+    sha256: 3d75ae60aba82d7c5b138f11450b31a79de2c9a8c69878f063ea1c543f3b1519
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - Shell
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official BusyBox Git repository at the pinned 1.37.0 commit.
+  - name: gnu/glibc
+    source: gnu/glibc
+    version: d2097651cc57834dbfcaa102ddfacae0d86cfb66
+    license: LGPL-2.1-or-later
+    license_evidence:
+      url: https://sourceware.org/git/?p=glibc.git;a=blob;f=COPYING.LIB;hb=d2097651cc57834dbfcaa102ddfacae0d86cfb66
+    url: https://sourceware.org/git/glibc.git
+    category: public-dataset
+    sha256: fb950c97a02b309350d46bd34c757357ae78701c24dea9a438e37ac120f73162
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official glibc Git repository at the pinned glibc-2.42 commit.
+  - name: gnu/gcc
+    source: gnu/gcc
+    version: 5115c7e447fc07457443df874bf57840e8316d5f
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://github.com/gcc-mirror/gcc/blob/5115c7e447fc07457443df874bf57840e8316d5f/COPYING3
+    url: https://gcc.gnu.org/git/gcc.git
+    category: public-dataset
+    sha256: 9a320b37b2e259653a46205df54364c5b30eeeacbe5f248c37b2c7328a432a21
+    content:
+      types:
+        - source code
+      languages:
+        - Ada
+        - C
+        - C++
+        - D
+        - Fortran
+        - Go
+        - Rust
+      selection: Tracked project files selected by the reviewed --source-code profile; runtime-library exceptions and incorporated component notices remain in the source tree.
+      copyrighted: yes
+    acquisition:
+      basis: Official GCC repository identity, acquired from its public GitHub mirror at the identical pinned GCC 15.2.0 commit to avoid Sourceware rate limiting.
+  - name: gnu/binutils-gdb
+    source: gnu/binutils-gdb
+    version: 2bc7af1ff7732451b6a7b09462a815c3284f9613
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://sourceware.org/git/?p=binutils-gdb.git;a=blob;f=COPYING3;hb=2bc7af1ff7732451b6a7b09462a815c3284f9613
+    url: https://sourceware.org/git/binutils-gdb.git
+    category: public-dataset
+    sha256: 95da37fab216ca8d836c4f4517757028ce80520291ff864fa7a1d8582d16ab19
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - C++
+      selection: Tracked project files selected by the reviewed --source-code profile; incorporated component notices remain in the source tree.
+      copyrighted: yes
+    acquisition:
+      basis: Official Sourceware binutils-gdb Git repository at the pinned binutils 2.45 commit.
+  - name: gnu/grub
+    source: gnu/grub
+    version: 5ca9db22e8ed0dbebb2aec53722972de0680a463
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/grub.git/tree/COPYING?id=5ca9db22e8ed0dbebb2aec53722972de0680a463
+    url: https://git.savannah.gnu.org/cgit/grub.git
+    category: public-dataset
+    sha256: 4336ff1b77bbe1cb4fb87d56942a04637766bb31a21c9a0dfe12b9da2e6bbf88
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU GRUB Git repository at the pinned 2.12 commit.
+  - name: gnu/autoconf
+    source: gnu/autoconf
+    version: 6199cff2909e0ac84c9391aa49ed097d6a33268d
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/autoconf.git/tree/COPYING?id=6199cff2909e0ac84c9391aa49ed097d6a33268d
+    url: https://git.savannah.gnu.org/cgit/autoconf.git
+    category: public-dataset
+    sha256: 49a07d2a6dc1793a1ea146987a70f19562d08a9002815548bca1b69b562d2d66
+    content:
+      types:
+        - source code
+      languages:
+        - M4
+        - Perl
+        - Shell
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Autoconf Git repository at the pinned 2.72 commit.
+  - name: gnu/automake
+    source: gnu/automake
+    version: 153298e27fa9414b25453440a2f36e1bb7bedfc1
+    license: GPL-2.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/automake.git/tree/COPYING?id=153298e27fa9414b25453440a2f36e1bb7bedfc1
+    url: https://git.savannah.gnu.org/cgit/automake.git
+    category: public-dataset
+    sha256: b521b952f6fb14e79402183736314eb5a237297369cbfc311e08078cab1b675c
+    content:
+      types:
+        - source code
+      languages:
+        - M4
+        - Perl
+        - Shell
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Automake Git repository at the pinned 1.18.1 commit.
+  - name: gnu/m4
+    source: gnu/m4
+    version: 8103916f2cbf885cae4f6c7c6e6f142f4b8c43f2
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/m4.git/tree/COPYING?id=8103916f2cbf885cae4f6c7c6e6f142f4b8c43f2
+    url: https://git.savannah.gnu.org/cgit/m4.git
+    category: public-dataset
+    sha256: 95d646ad0917c40fca814a673e3cd9c55bfc329f8203f904cb39424e4217c266
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - M4
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU M4 Git repository at the pinned 1.4.20 commit.
+  - name: gnu/bison
+    source: gnu/bison
+    version: 9beba1919cad5dd08b0cac277c27896808719e4b
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/bison.git/tree/COPYING?id=9beba1919cad5dd08b0cac277c27896808719e4b
+    url: https://git.savannah.gnu.org/cgit/bison.git
+    category: public-dataset
+    sha256: 223717cdb37723a264b050007705cda47f9819ab6040ab974d33f8e74f7bde2b
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - C++
+        - M4
+      selection: Tracked project files selected by the reviewed --source-code profile; generated-parser exceptions remain documented upstream.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Bison Git repository at the pinned 3.8.2 commit.
+  - name: gnu/gettext
+    source: gnu/gettext
+    version: d16c3c8f0554be9a6983bb14fae4987340f8f4c6
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/gettext.git/tree/COPYING?id=d16c3c8f0554be9a6983bb14fae4987340f8f4c6
+    url: https://git.savannah.gnu.org/cgit/gettext.git
+    category: public-dataset
+    sha256: 2e30ce7faff851c3e7334152799d6c104678a973ec72d9fa248ba6c12be22e85
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - C++
+        - Java
+      selection: Tracked project files selected by the reviewed --source-code profile; library and runtime exceptions remain documented upstream.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Gettext Git repository at the pinned 0.26 commit.
+  - name: gnu/libtool
+    source: gnu/libtool
+    version: db22f7fce768951ac89a83ea3ddedbb8a46511f7
+    license: GPL-2.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/libtool.git/tree/COPYING?id=db22f7fce768951ac89a83ea3ddedbb8a46511f7
+    url: https://git.savannah.gnu.org/cgit/libtool.git
+    category: public-dataset
+    sha256: 5fec67d998367e7aeefb9ab05cd0379323b8bc97fb4d3565c7235caef52dcb42
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - M4
+        - Shell
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Libtool Git repository at the pinned 2.5.4 commit.
+  - name: gnu/inetutils
+    source: gnu/inetutils
+    version: 380e69a57239bce9cc6a9a9318bb92e001f31cac
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/inetutils.git/tree/COPYING?id=380e69a57239bce9cc6a9a9318bb92e001f31cac
+    url: https://git.savannah.gnu.org/cgit/inetutils.git
+    category: public-dataset
+    sha256: 173b59649f20d92c25a0a3bca1a5f45d0e172b865519583c09bd25b5cfabb196
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU Inetutils Git repository at the pinned 2.7 commit.
+  - name: gnu/gperf
+    source: gnu/gperf
+    version: d2aeec9b9c1fd04dbf747afe4ada8e772d315ccd
+    license: GPL-3.0-or-later
+    license_evidence:
+      url: https://git.savannah.gnu.org/cgit/gperf.git/tree/COPYING?id=d2aeec9b9c1fd04dbf747afe4ada8e772d315ccd
+    url: https://git.savannah.gnu.org/cgit/gperf.git
+    category: public-dataset
+    sha256: 338d2ebe36244725c86aca5692670269bfb1056196189a95bf1e7c415e357d50
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - C++
+      selection: Tracked project files selected by the reviewed --source-code profile; generated-output terms remain documented upstream.
+      copyrighted: yes
+    acquisition:
+      basis: Official GNU gperf Git repository at the pinned 3.3 commit.
+  - name: procps-ng/procps
+    source: procps-ng/procps
+    version: f46b2f7929cdfe2913ed0a7f585b09d6adbf994e
+    license: GPL-2.0-or-later AND LGPL-2.1-or-later
+    license_evidence:
+      url: https://gitlab.com/procps-ng/procps/-/blob/f46b2f7929cdfe2913ed0a7f585b09d6adbf994e/COPYING
+    url: https://gitlab.com/procps-ng/procps
+    category: public-dataset
+    sha256: 2f843eacebe0f054e0b1db39ba3cf079f3ad21626b179f9b70704bf965eebc16
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile; GPL utility and LGPL library licensing remains identified upstream.
+      copyrighted: yes
+    acquisition:
+      basis: Official procps-ng Git repository at the pinned v4.0.5 commit.
+  - name: psmisc/psmisc
+    source: psmisc/psmisc
+    version: 9091d6dbcce3d8fb87adf9249a2eb346d25a562c
+    license: GPL-2.0-or-later
+    license_evidence:
+      url: https://gitlab.com/psmisc/psmisc/-/blob/9091d6dbcce3d8fb87adf9249a2eb346d25a562c/COPYING
+    url: https://gitlab.com/psmisc/psmisc
+    category: public-dataset
+    sha256: 423afdc04a2901f4323032ba8e541bb96801081f2ceabb9b4bd22c5cabce4aff
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Tracked project files selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official psmisc Git repository at the pinned v23.7 commit.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@eab40da5ffa4535a013e766c77f6dd76768bae8f:recipes/code/linux-core.yaml#sha256=daa23ef6b565131f31cd3d027a40ddfd3491b58b5f14f92f1509ba637445a8ff
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/cd/a7/cda7fc5095dac298c400ceb0d016d1c992677afbaec6723cd048bb5be927ae40
+    sha256: cda7fc5095dac298c400ceb0d016d1c992677afbaec6723cd048bb5be927ae40
+    licenses:
+      - GPL-2.0-only
+      - GPL-2.0-or-later
+      - GPL-2.0-or-later AND LGPL-2.1-or-later
+      - GPL-3.0-or-later
+      - LGPL-2.1-or-later
+    license_usage:
+      GPL-2.0-only:
+        shards: 0
+        docs: 13438
+        tokens: 26027763
+        bytes: 0
+      GPL-2.0-or-later:
+        shards: 0
+        docs: 2363
+        tokens: 4592855
+        bytes: 0
+      GPL-2.0-or-later AND LGPL-2.1-or-later:
+        shards: 0
+        docs: 294
+        tokens: 394015
+        bytes: 0
+      GPL-3.0-or-later:
+        shards: 0
+        docs: 184591
+        tokens: 416134640
+        bytes: 0
+      LGPL-2.1-or-later:
+        shards: 0
+        docs: 19488
+        tokens: 113027735
+        bytes: 0
+    sources:
+      - busybox/busybox
+      - gnu/autoconf
+      - gnu/automake
+      - gnu/binutils-gdb
+      - gnu/bison
+      - gnu/gcc
+      - gnu/gettext
+      - gnu/glibc
+      - gnu/gperf
+      - gnu/grub
+      - gnu/inetutils
+      - gnu/libtool
+      - kernel/btrfs-progs
+      - kernel/iproute2
+      - kernel/kmod
+      - linux/kernel
+      - netfilter/iptables
+    docs: 220174
+    tokens: 560177008
+    bytes: 271736413
+  - url: s3://openwaldo/lookaside/d4/ff/d4ff2c94ce736b785191dc9f041a59357ed32a25d856f76299859303e44646c5
+    sha256: d4ff2c94ce736b785191dc9f041a59357ed32a25d856f76299859303e44646c5
+    licenses:
+      - GPL-2.0-only
+      - GPL-2.0-or-later
+      - GPL-2.0-or-later AND LGPL-2.1-or-later
+      - GPL-3.0-or-later
+    license_usage:
+      GPL-2.0-only:
+        shards: 0
+        docs: 79916
+        tokens: 449541560
+        bytes: 0
+      GPL-2.0-or-later:
+        shards: 0
+        docs: 1870
+        tokens: 2289349
+        bytes: 0
+      GPL-2.0-or-later AND LGPL-2.1-or-later:
+        shards: 0
+        docs: 205
+        tokens: 2964044
+        bytes: 0
+      GPL-3.0-or-later:
+        shards: 0
+        docs: 91
+        tokens: 290780
+        bytes: 0
+    sources:
+      - gnu/m4
+      - kernel/xfsprogs
+      - linux/kernel
+      - netfilter/nftables
+      - procps-ng/procps
+      - psmisc/psmisc
+    docs: 82082
+    tokens: 455085733
+    bytes: 215183787

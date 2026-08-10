@@ -2,5 +2,7 @@ kind: index
 schema: 1
 path: code/permissive
 entries:
+  - name: linux-core
+    type: dir
   - name: permissive.yaml
     type: manifest

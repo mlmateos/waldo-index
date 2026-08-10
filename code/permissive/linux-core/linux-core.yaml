@@ -1,0 +1,296 @@
+kind: manifest
+schema: 2
+name: linux-core
+title: Linux Core — Permissive Alternatives and BSD
+description: Pinned permissively licensed libc, shell, userland, init/package tooling, and BSD base-system source selected without copyleft imported trees.
+licenses:
+  - 0BSD
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - LicenseRef-FreeBSD-permissive
+  - LicenseRef-NetBSD-permissive
+  - LicenseRef-OpenBSD-permissive
+  - MIT
+sources:
+  - name: musl/libc
+    source: musl/libc
+    version: 0784374d561435f7c787a555aeab8ede699ed298
+    license: MIT
+    license_evidence:
+      url: https://git.musl-libc.org/cgit/musl/tree/COPYRIGHT?id=0784374d561435f7c787a555aeab8ede699ed298
+    url: https://git.musl-libc.org/cgit/musl
+    category: public-dataset
+    sha256: 859726a2812a4aa47eefa775970eb5e12b07a3ad6d6850d3eabe3935cbe556f6
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official musl Git repository at the pinned v1.2.5 commit.
+  - name: landley/toybox
+    source: landley/toybox
+    version: 7eaddbdb9c1712801ddf131ed79ead0c981ffcb1
+    license: 0BSD
+    license_evidence:
+      url: https://github.com/landley/toybox/blob/7eaddbdb9c1712801ddf131ed79ead0c981ffcb1/LICENSE
+    url: https://landley.net/toybox
+    category: public-dataset
+    sha256: d291eeedc4344df68dd403882310d5dffb8d478c2b7bdfc853bc672add961db0
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - Shell
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official Toybox repository at the pinned 0.8.12 commit.
+  - name: kernel/dash
+    source: kernel/dash
+    version: 4bbf8721a3ac6401ced6a0454956801f6ba37256
+    license: BSD-3-Clause
+    license_evidence:
+      url: https://git.kernel.org/pub/scm/utils/dash/dash.git/tree/COPYING?id=4bbf8721a3ac6401ced6a0454956801f6ba37256
+    url: https://git.kernel.org/pub/scm/utils/dash/dash.git
+    category: public-dataset
+    sha256: e4efca7d4a7587c922a99084a7cb1158075738f1724201cf72521f546eb09e38
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official dash Git repository at the pinned v0.5.12 commit.
+  - name: suckless/sbase
+    source: suckless/sbase
+    version: c546c3a5724c81cee9a11d816a38ccdf17472129
+    license: MIT
+    license_evidence:
+      url: https://git.suckless.org/sbase/file/LICENSE.html
+    url: https://core.suckless.org/sbase
+    category: public-dataset
+    sha256: 245d42935206715fc3b600312c79c888c1eb73f795b1e9a6164904300c7eb34d
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official suckless sbase Git repository at the pinned commit.
+  - name: suckless/ubase
+    source: suckless/ubase
+    version: e8249b49ca3e02032dece5e0cdac3d236667a6d9
+    license: MIT
+    license_evidence:
+      url: https://git.suckless.org/ubase/file/LICENSE.html
+    url: https://core.suckless.org/ubase
+    category: public-dataset
+    sha256: 9add0499e9570e07722ae1023caca4df02964465e2d2fe54b60a654ba404da54
+    content:
+      types:
+        - source code
+      languages:
+        - C
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official suckless ubase Git repository at the pinned commit.
+  - name: OpenRC/openrc
+    source: OpenRC/openrc
+    version: f232308ad67cc94bd95e98a6af4a47fc58912b70
+    license: LicenseRef-FreeBSD-permissive
+    license_evidence:
+      url: https://github.com/OpenRC/openrc/blob/f232308ad67cc94bd95e98a6af4a47fc58912b70/LICENSE
+    url: https://github.com/OpenRC/openrc
+    category: public-dataset
+    sha256: 805939da9a110eb27bce59a27b45191bfcb81d69a3ea434ddb07040b7fe93047
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - Shell
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official OpenRC Git repository at the pinned 0.62.3 commit.
+  - name: void-linux/xbps
+    source: void-linux/xbps
+    version: 364428243685bd3f85e27e140f98981790e7295e
+    license: BSD-2-Clause
+    license_evidence:
+      url: https://github.com/void-linux/xbps/blob/364428243685bd3f85e27e140f98981790e7295e/LICENSE
+    url: https://github.com/void-linux/xbps
+    category: public-dataset
+    sha256: 786f98a3792bf662d11577e9774f914c11bf1c00874f72643b028f6459c2b3d7
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - Shell
+      selection: Complete tracked project source selected by the reviewed --source-code profile.
+      copyrighted: yes
+    acquisition:
+      basis: Official XBPS Git repository at the pinned 0.60 commit.
+  - name: openssh/openssh-portable
+    source: openssh/openssh-portable
+    version: e8dd756725e8800fcd0b3fd71ee6b4382d1e8fab
+    license: BSD-2-Clause
+    license_evidence:
+      url: https://github.com/openssh/openssh-portable/blob/e8dd756725e8800fcd0b3fd71ee6b4382d1e8fab/LICENCE
+    url: https://github.com/openssh/openssh-portable
+    category: public-dataset
+    sha256: bb8c4927e5588bb706abd458e3e4a5770cc6fb143afb5cde8e131f91e36f4401
+    content:
+      types:
+        - source code
+      languages:
+        - C
+        - Shell
+      selection: Complete tracked portable OpenSSH source selected by the reviewed --source-code profile; bundled compatibility notices remain in the source tree.
+      copyrighted: yes
+    acquisition:
+      basis: Official OpenSSH Portable Git repository at the pinned V_10_4_P1 commit.
+  - name: FreeBSD/src
+    source: FreeBSD/src
+    version: 7aedc8de6446ad5a10d553b926423c689f0a3363
+    license: BSD-2-Clause
+    license_evidence:
+      url: https://github.com/freebsd/freebsd-src/blob/7aedc8de6446ad5a10d553b926423c689f0a3363/COPYRIGHT
+    url: https://github.com/freebsd/freebsd-src
+    category: public-dataset
+    sha256: b023214bf29f30402c2fefe643b678c68a4d6d2345cc062582ded85a935e4cc8
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+        - C++
+        - Shell
+      selection: Project-owned permissive base-system source; contrib, crypto, CDDL, GNU, microcode, and other imported third-party trees excluded.
+      copyrighted: yes
+    acquisition:
+      basis: Official FreeBSD source repository at the pinned 15.0 release commit.
+  - name: OpenBSD/src
+    source: OpenBSD/src
+    version: 003d9ff8ec54f3f15e165d831f1972e2a710cfce
+    license: LicenseRef-OpenBSD-permissive
+    license_evidence:
+      url: https://www.openbsd.org/policy.html
+    url: https://github.com/openbsd/src
+    category: public-dataset
+    sha256: a30ebc2a7550c6c67ae8ce246b60311fb9519e8429d2884bbc08fb69967b34b6
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+        - C++
+        - Shell
+      selection: OpenBSD permissive base-system source at an immutable mirror commit; GNU and microcode trees excluded, and retained files preserve their ISC/BSD-style notices.
+      copyrighted: yes
+    acquisition:
+      basis: Official OpenBSD GitHub source mirror pinned by exact commit.
+  - name: NetBSD/src
+    source: NetBSD/src
+    version: 1d2eff37050c088093399be0526404544f166cab
+    license: LicenseRef-NetBSD-permissive
+    license_evidence:
+      url: https://www.netbsd.org/about/redistribution.html
+    url: https://github.com/NetBSD/src
+    category: public-dataset
+    sha256: ab61898320053be42930dac694f563f1227e8566dae9a79061ce0c44db880c53
+    content:
+      types:
+        - source code
+      languages:
+        - Assembly
+        - C
+        - C++
+        - Shell
+      selection: Project-owned permissive NetBSD base-system source with crypto, external, firmware, and imported sys/external trees excluded explicitly.
+      copyrighted: yes
+    acquisition:
+      basis: Official NetBSD GitHub source mirror pinned by exact netbsd-10 branch commit.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@eab40da5ffa4535a013e766c77f6dd76768bae8f:recipes/code/linux-core-permissive.yaml#sha256=642457cdf859d9aee2c3d395c6253c4cee5a71b2ec649e646e06aef973bf0def
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/ac/ba/acba08e71dc7268b02e3d53a4575762d457c43ce4a6e553a822839c42043083d
+    sha256: acba08e71dc7268b02e3d53a4575762d457c43ce4a6e553a822839c42043083d
+    licenses:
+      - 0BSD
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - LicenseRef-FreeBSD-permissive
+      - LicenseRef-NetBSD-permissive
+      - LicenseRef-OpenBSD-permissive
+      - MIT
+    license_usage:
+      0BSD:
+        shards: 0
+        docs: 592
+        tokens: 3573356
+        bytes: 0
+      BSD-2-Clause:
+        shards: 0
+        docs: 37676
+        tokens: 236976013
+        bytes: 0
+      BSD-3-Clause:
+        shards: 0
+        docs: 85
+        tokens: 185587
+        bytes: 0
+      LicenseRef-FreeBSD-permissive:
+        shards: 0
+        docs: 325
+        tokens: 280057
+        bytes: 0
+      LicenseRef-NetBSD-permissive:
+        shards: 0
+        docs: 44590
+        tokens: 121180020
+        bytes: 0
+      LicenseRef-OpenBSD-permissive:
+        shards: 0
+        docs: 45204
+        tokens: 242429631
+        bytes: 0
+      MIT:
+        shards: 0
+        docs: 2951
+        tokens: 1606512
+        bytes: 0
+    sources:
+      - FreeBSD/src
+      - NetBSD/src
+      - OpenBSD/src
+      - OpenRC/openrc
+      - kernel/dash
+      - landley/toybox
+      - musl/libc
+      - openssh/openssh-portable
+      - suckless/sbase
+      - suckless/ubase
+      - void-linux/xbps
+    docs: 131423
+    tokens: 606231176
+    bytes: 269241956

@@ -4,3 +4,5 @@ path: code/copyleft
 entries:
   - name: copyleft.yaml
     type: manifest
+  - name: linux-core
+    type: dir
