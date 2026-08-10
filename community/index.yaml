@@ -18,3 +18,5 @@ entries:
     type: dir
   - name: opensource-mailing-lists
     type: dir
+  - name: qemu-devel-mailing-list
+    type: dir

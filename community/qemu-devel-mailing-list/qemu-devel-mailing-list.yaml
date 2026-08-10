@@ -1,0 +1,55 @@
+kind: manifest
+schema: 2
+name: qemu-devel-mailing-list
+title: QEMU Development Mailing List
+description: Calendar-year 2025 QEMU development messages from the official lore.kernel.org public archive.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: qemu-devel@nongnu.org
+    source: qemu-devel@nongnu.org
+    version: 2025-epoch-3-45ee738fd37099fe42f420873b0205f1b0fb2af3
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: Kernel.org operates lore as a public Git-backed mailing-list archive with downloadable mbox and Git exports; no blanket content license is asserted for individual messages.
+      url: https://www.kernel.org/doc/projects/korg/lore.html
+    url: https://lore.kernel.org/qemu-devel/
+    category: public-dataset
+    sha256: 62f7563d9d918d4b50a59c343896a42d0fd2f7d76bc48f822f9184522bc4782a
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - patches
+        - source code review
+      languages:
+        - en
+      from: "2025-01-01"
+      to: "2025-12-31"
+      selection: Every message commit whose author timestamp falls in calendar year 2025 from pinned public-inbox epoch 3; all 73,381 raw RFC 822 message blobs are retained as individual commit-addressed .eml inputs.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official lore.kernel.org public-inbox Git epoch fetched by immutable object ID and streamed without per-message subprocesses.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@faeaf2a26367ecc99b40ffe08fdd125a45ec02c8:recipes/community/qemu-devel-mailing-list.yaml#sha256=5bcb8c10d1ccbb9f5a86d953b9811fea0e8d5cf2a6b2be69ac2013c2e6f181d8
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/99/39/993936d860c7eee003a190282e2341d0ee656c2011b20bc7a962c21214bc9972
+    sha256: 993936d860c7eee003a190282e2341d0ee656c2011b20bc7a962c21214bc9972
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 73381
+        tokens: 338940756
+        bytes: 0
+    sources:
+      - qemu-devel@nongnu.org
+    docs: 73381
+    tokens: 338940756
+    bytes: 199574099

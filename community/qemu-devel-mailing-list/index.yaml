@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/qemu-devel-mailing-list
+entries:
+  - name: qemu-devel-mailing-list.yaml
+    type: manifest
