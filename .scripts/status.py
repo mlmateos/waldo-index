@@ -55,12 +55,24 @@ def add(agg, license_id, shards, docs, tokens, nbytes):
     agg["docs"] += docs
     agg["tokens"] += tokens
     agg["bytes"] += nbytes
+    add_license(agg, license_id, shards, docs, tokens, nbytes)
+
+
+def add_license(agg, license_id, shards, docs, tokens, nbytes):
     lic = agg["licenses"].setdefault(
         license_id, {"shards": 0, "docs": 0, "tokens": 0, "bytes": 0})
     lic["shards"] += shards
     lic["docs"] += docs
     lic["tokens"] += tokens
     lic["bytes"] += nbytes
+
+
+def license_list(value):
+    """Return a manifest/shard's singular or plural license declaration."""
+    singular = value.get("license")
+    if singular:
+        return [singular]
+    return list(value.get("licenses") or [])
 
 
 def walk(root, dirpath, agg, corpora):
@@ -72,7 +84,7 @@ def walk(root, dirpath, agg, corpora):
         elif etype == "manifest":
             m = load_metadata(os.path.join(dirpath, name))
             agg["manifests"] += 1
-            default = m.get("license", "") or "(none declared)"
+            defaults = license_list(m) or ["(none declared)"]
             # One table row per manifest: provenance + its own stats.
             row = {
                 "path": os.path.relpath(dirpath, root),
@@ -94,23 +106,39 @@ def walk(root, dirpath, agg, corpora):
             # Shard entries inherit the manifest license unless they carry
             # their own — the partition must match the tree's.
             rollup = m.get("rollup")
-            if rollup:
-                units = [(default, int(rollup.get("count", 0)),
-                          rollup.get("docs", 0), rollup.get("tokens", 0),
-                          rollup.get("bytes", 0))]
-            else:
-                units = [(sh.get("license") or default, 1, sh.get("docs", 0),
-                          sh.get("tokens", 0), sh.get("bytes", 0))
-                         for sh in m.get("shards", [])]
-            for lic, shards, docs, tokens, nbytes in units:
-                add(agg, lic, shards, docs, tokens, nbytes)
+            objects = [(rollup, int(rollup.get("count", 0)))] if rollup else [
+                (shard, 1) for shard in m.get("shards", [])]
+            for obj, shards in objects:
+                docs = obj.get("docs", 0)
+                tokens = obj.get("tokens", 0)
+                nbytes = obj.get("bytes", 0)
+                licenses = license_list(obj) or defaults
+                if len(licenses) == 1:
+                    add(agg, licenses[0], shards, docs, tokens, nbytes)
+                else:
+                    agg["shards"] += shards
+                    agg["docs"] += docs
+                    agg["tokens"] += tokens
+                    agg["bytes"] += nbytes
+                    usage = obj.get("license_usage") or {}
+                    for lic in licenses:
+                        measure = usage.get(lic) or {}
+                        add_license(agg, lic, shards,
+                                    measure.get("docs", 0),
+                                    measure.get("tokens", 0),
+                                    measure.get("bytes", 0))
                 row["shards"] += shards
                 row["docs"] += docs
                 row["tokens"] += tokens
                 row["bytes"] += nbytes
-                rl = row["licenses"].setdefault(lic, {"shards": 0, "tokens": 0})
-                rl["shards"] += shards
-                rl["tokens"] += tokens
+                usage = obj.get("license_usage") or {}
+                for lic in licenses:
+                    measure = usage.get(lic) or {}
+                    rl = row["licenses"].setdefault(
+                        lic, {"shards": 0, "tokens": 0})
+                    rl["shards"] += shards
+                    rl["tokens"] += (tokens if len(licenses) == 1 else
+                                     measure.get("tokens", 0))
             row["licenses"] = dict(sorted(row["licenses"].items()))
             corpora.append(row)
 

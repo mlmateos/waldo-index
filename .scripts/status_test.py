@@ -69,6 +69,41 @@ class StatusTest(unittest.TestCase):
             self.assertEqual({row["name"] for row in corpora},
                              {"current", "legacy"})
 
+    def test_accounts_for_plural_licenses_and_usage(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.write_yaml(os.path.join(root, "index.yaml"), {
+                "kind": "index", "schema": 1, "entries": [
+                    {"name": "mixed.yaml", "type": "manifest"},
+                ],
+            })
+            self.write_yaml(os.path.join(root, "mixed.yaml"), {
+                "kind": "manifest", "schema": 2, "name": "mixed",
+                "licenses": ["CC-BY-4.0", "CC0-1.0"],
+                "shards": [{
+                    "licenses": ["CC-BY-4.0", "CC0-1.0"],
+                    "license_usage": {
+                        "CC-BY-4.0": {"docs": 3, "tokens": 30, "bytes": 300},
+                        "CC0-1.0": {"docs": 2, "tokens": 20, "bytes": 200},
+                    },
+                    "docs": 5, "tokens": 50, "bytes": 500,
+                }],
+            })
+
+            agg = {"manifests": 0, "shards": 0, "docs": 0, "tokens": 0,
+                   "bytes": 0, "licenses": {}}
+            corpora = []
+            status.walk(root, root, agg, corpora)
+
+            self.assertEqual((agg["shards"], agg["docs"], agg["tokens"],
+                              agg["bytes"]), (1, 5, 50, 500))
+            self.assertNotIn("(none declared)", agg["licenses"])
+            self.assertEqual(agg["licenses"]["CC-BY-4.0"]["tokens"], 30)
+            self.assertEqual(agg["licenses"]["CC0-1.0"]["tokens"], 20)
+            self.assertEqual(corpora[0]["licenses"], {
+                "CC-BY-4.0": {"shards": 1, "tokens": 30},
+                "CC0-1.0": {"shards": 1, "tokens": 20},
+            })
+
 
 if __name__ == "__main__":
     unittest.main()
