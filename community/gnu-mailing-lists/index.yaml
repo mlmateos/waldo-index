@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: community/gnu-mailing-lists
+entries:
+  - name: gnu-mailing-lists.yaml
+    type: manifest

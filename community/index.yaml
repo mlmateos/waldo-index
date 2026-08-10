@@ -10,6 +10,8 @@ entries:
     type: dir
   - name: glibc-mailing-lists
     type: dir
+  - name: gnu-mailing-lists
+    type: dir
   - name: linux-kernel-mailing-list
     type: dir
   - name: opensource-mailing-lists

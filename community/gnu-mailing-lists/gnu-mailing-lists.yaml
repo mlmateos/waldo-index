@@ -1,0 +1,106 @@
+kind: manifest
+schema: 2
+name: gnu-mailing-lists
+title: GNU Development and User Mailing Lists
+description: Checksum-pinned calendar-year 2025 messages from three official GNU monthly raw-mbox archives.
+license: LicenseRef-Publicly-Archived-Forum
+sources:
+  - name: emacs-devel@gnu.org
+    source: emacs-devel@gnu.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: GNU operates this official public mailing-list archive and explicitly offers its messages as downloadable mbox files; no blanket content license is asserted for individual messages.
+      url: https://lists.gnu.org/archive/html/emacs-devel/
+    url: https://lists.gnu.org/archive/html/emacs-devel/
+    category: public-dataset
+    sha256: 1044906475769b1b6e804271345c7db5333e0e1df4e90050e880b9ff0210498f
+    content:
+      types:
+        - developer communications
+        - mailing list
+        - source code review
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve official monthly raw-mbox files for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official GNU raw-mbox archive with every selected monthly payload pinned by SHA-256.
+  - name: bug-bash@gnu.org
+    source: bug-bash@gnu.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: GNU operates this official public mailing-list archive and explicitly offers its messages as downloadable mbox files; no blanket content license is asserted for individual messages.
+      url: https://lists.gnu.org/archive/html/bug-bash/
+    url: https://lists.gnu.org/archive/html/bug-bash/
+    category: public-dataset
+    sha256: e1f10dbbafa3651564f3efb8518e15c8f63b10ab9a2349ffd1c397d843a65aa1
+    content:
+      types:
+        - bug reports
+        - developer communications
+        - mailing list
+        - user support
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve official monthly raw-mbox files for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official GNU raw-mbox archive with every selected monthly payload pinned by SHA-256.
+  - name: bug-coreutils@gnu.org
+    source: bug-coreutils@gnu.org
+    version: "2025"
+    license: LicenseRef-Publicly-Archived-Forum
+    license_evidence:
+      declaration: GNU operates this official public mailing-list archive and explicitly offers its messages as downloadable mbox files; no blanket content license is asserted for individual messages.
+      url: https://lists.gnu.org/archive/html/bug-coreutils/
+    url: https://lists.gnu.org/archive/html/bug-coreutils/
+    category: public-dataset
+    sha256: 3bab07c7be0c16853d1ca15a409e909c76ffa3e75189508e02f5e8f931b69209
+    content:
+      types:
+        - bug reports
+        - developer communications
+        - mailing list
+        - user support
+      languages:
+        - en
+      from: 2025-01
+      to: 2025-12
+      selection: All twelve official monthly raw-mbox files for calendar year 2025.
+      copyrighted: yes
+      machine_generated: unknown
+    acquisition:
+      basis: Official GNU raw-mbox archive with every selected monthly payload pinned by SHA-256.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: git@github.com:openwaldo/waldo-fetchers@4726bbe7a8f39896c22bc9bc8701a9441c3d5771:recipes/community/gnu-mailing-lists.yaml#sha256=48b47a0225cf56442b11983a51fa29397c77f5ed5a8b9d1b8a110b546f5f2297
+  profile: canonical-text-schema-1
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  tokenizer: tiktoken/cl100k_base
+record_schema: 1
+shards:
+  - url: s3://openwaldo/lookaside/ec/4f/ec4f052d1b6708ac3fcb5f34c4623f02a47ded852da401df3d291863a8c2de39
+    sha256: ec4f052d1b6708ac3fcb5f34c4623f02a47ded852da401df3d291863a8c2de39
+    license: LicenseRef-Publicly-Archived-Forum
+    license_usage:
+      LicenseRef-Publicly-Archived-Forum:
+        shards: 0
+        docs: 559
+        tokens: 144538843
+        bytes: 0
+    sources:
+      - bug-bash@gnu.org
+      - bug-coreutils@gnu.org
+      - emacs-devel@gnu.org
+    docs: 559
+    tokens: 144538843
+    bytes: 74003441
