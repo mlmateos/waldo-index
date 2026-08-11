@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: core/common-pile/pre-1929-books
+entries:
+  - name: pre-1929-books.yaml
+    type: manifest

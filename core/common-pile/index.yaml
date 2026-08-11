@@ -14,6 +14,8 @@ entries:
     type: dir
   - name: oercommons
     type: dir
+  - name: pre-1929-books
+    type: dir
   - name: pressbooks
     type: dir
   - name: public-domain-review
