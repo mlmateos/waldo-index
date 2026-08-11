@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: code/cloud-native-core
+entries:
+  - name: cloud-native-core.yaml
+    type: manifest

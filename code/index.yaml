@@ -2,6 +2,8 @@ kind: index
 schema: 1
 path: code
 entries:
+  - name: cloud-native-core
+    type: dir
   - name: copyleft
     type: dir
   - name: permissive
