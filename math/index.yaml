@@ -2,5 +2,7 @@ kind: index
 schema: 1
 path: math
 entries:
+  - name: lopez-mateos
+    type: dir
   - name: mathlib
     type: dir

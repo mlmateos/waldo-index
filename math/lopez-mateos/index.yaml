@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: math/lopez-mateos
+entries:
+  - name: conjuntos-logica-funciones
+    type: dir
