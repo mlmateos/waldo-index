@@ -82,14 +82,32 @@ sources:
 converted_by:
   tool: waldo index ingest
   version: 0.1.0-dev
-  collector: git@github.com:openwaldo/waldo-fetchers@c8d94ad:recipes/community/opensource-mailing-lists.yaml#sha256=c444332b920ff1c163f4af30f8eb64afd35ce5e64c8d471122d3b6cd95f43a8a
-  profile: canonical-text-schema-1
-  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v5-bom
+  collector: local@uncommitted:opensource-mailing-lists.yaml#sha256=c444332b920ff1c163f4af30f8eb64afd35ce5e64c8d471122d3b6cd95f43a8a
+  profile: canonical-text-schema-2
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v9-privacy-redaction
   tokenizer: tiktoken/cl100k_base
-record_schema: 1
+record_schema: 2
+assessment:
+  email_addresses:
+    detector: waldo/email-address-v1
+    records: 0
+  repetitive_content:
+    detector: waldo/gopher-ngram-repetition-v1
+    records: 25
+  boilerplate_content:
+    detector: waldo/gopher-structural-duplication-v1
+    records: 18
+redaction:
+  policy: waldo/privacy-redaction-v1
+  names_retained: true
+  email_addresses: 2476
+  ip_addresses: 9
+  phone_numbers: 298
+  mail_routing_headers: 28
+  credentials: 0
 shards:
-  - url: s3://openwaldo/lookaside/06/9f/069f9842a8b31282b3b0e90fb8d272ddc186758d87eba9fe8e4ff8c68803cfa8
-    sha256: 069f9842a8b31282b3b0e90fb8d272ddc186758d87eba9fe8e4ff8c68803cfa8
+  - url: s3://openwaldo/lookaside/06/1a/061afd643510136ed86bcd93cd28096c26a4a449d4fd7a612a6aa58fda543c8c
+    sha256: 061afd643510136ed86bcd93cd28096c26a4a449d4fd7a612a6aa58fda543c8c
     licenses:
       - LicenseRef-OSI-Public-Forum
       - LicenseRef-Publicly-Archived-Forum
@@ -97,17 +115,35 @@ shards:
       LicenseRef-OSI-Public-Forum:
         shards: 0
         docs: 22
-        tokens: 858654
+        tokens: 789452
         bytes: 0
       LicenseRef-Publicly-Archived-Forum:
         shards: 0
         docs: 6
-        tokens: 15260
+        tokens: 12735
         bytes: 0
     sources:
       - Beowulf Mailing List
       - OSI License Discuss
       - OSI License Review
     docs: 28
-    tokens: 873914
-    bytes: 507463
+    tokens: 802187
+    bytes: 473660
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 25
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 18
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 2476
+      ip_addresses: 9
+      phone_numbers: 298
+      mail_routing_headers: 28
+      credentials: 0
