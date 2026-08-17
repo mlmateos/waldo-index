@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: math/lopez-mateos/conjuntos-logica-funciones
+entries:
+  - name: conjuntos-logica-funciones.yaml
+    type: manifest
