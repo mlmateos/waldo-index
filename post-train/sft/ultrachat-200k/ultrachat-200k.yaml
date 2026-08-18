@@ -1,0 +1,120 @@
+kind: manifest
+schema: 2
+name: ultrachat-200k
+title: UltraChat 200k SFT
+description: Curated multi-turn assistant conversations from the UltraChat 200k supervised fine-tuning split.
+license: MIT
+sources:
+  - name: HuggingFaceH4/ultrachat_200k
+    source: HuggingFaceH4/ultrachat_200k
+    version: 8049631c405ae6576f93f445c6b8166f76f5505a
+    license: MIT
+    license_evidence:
+      declaration: MIT
+      url: https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k/tree/8049631c405ae6576f93f445c6b8166f76f5505a
+    url: https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k
+    category: public-dataset
+    sha256: 42e111a9587d2b6d41df6a308b859d3b7e3fa846eb0de10899422c765cc6da2a
+    content:
+      types:
+        - multi-turn conversations
+        - synthetic responses
+      languages:
+        - en
+      selection: The three pinned train_sft Parquet shards only; test_sft and generation splits are excluded.
+      personal_data: unknown
+      copyrighted: yes
+      machine_generated: yes
+    acquisition:
+      basis: Public supervised fine-tuning release curated from UltraChat generations.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: local@uncommitted:ultrachat-200k.yaml#sha256=e125c75b8e1c82399db07b07037d007cd29e2884fed914ec8e692466b11079e9
+  profile: canonical-text-schema-2@sha256:01ffe5f65b2fb06ab81aee4656b15124737ef239e26bf323aea07d56d928f05b
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v9-privacy-redaction
+  tokenizer: tiktoken/cl100k_base
+record_schema: 2
+assessment:
+  email_addresses:
+    detector: waldo/email-address-v1
+    records: 0
+  repetitive_content:
+    detector: waldo/gopher-ngram-repetition-v1
+    records: 24904
+  boilerplate_content:
+    detector: waldo/gopher-structural-duplication-v1
+    records: 11426
+redaction:
+  policy: waldo/privacy-redaction-v1
+  names_retained: true
+  email_addresses: 4182
+  ip_addresses: 5741
+  phone_numbers: 4454
+  mail_routing_headers: 0
+  credentials: 893
+shards:
+  - url: s3://openwaldo/lookaside/d7/35/d7352ed7d8f026b231827c1dc9470935c12589ed5aa056c1381dd27fe7aab44d
+    sha256: d7352ed7d8f026b231827c1dc9470935c12589ed5aa056c1381dd27fe7aab44d
+    license: MIT
+    license_usage:
+      MIT:
+        shards: 0
+        docs: 151583
+        tokens: 175569721
+        bytes: 0
+    sources:
+      - HuggingFaceH4/ultrachat_200k
+    docs: 151583
+    tokens: 175569721
+    bytes: 271085484
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 18070
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 8219
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 3102
+      ip_addresses: 4041
+      phone_numbers: 3383
+      mail_routing_headers: 0
+      credentials: 612
+  - url: s3://openwaldo/lookaside/a2/76/a276e535ad1c3e9bdae16d109066d9451c31fdd9cc9d67289a29430cdedd943a
+    sha256: a276e535ad1c3e9bdae16d109066d9451c31fdd9cc9d67289a29430cdedd943a
+    license: MIT
+    license_usage:
+      MIT:
+        shards: 0
+        docs: 56249
+        tokens: 65267736
+        bytes: 0
+    sources:
+      - HuggingFaceH4/ultrachat_200k
+    docs: 56249
+    tokens: 65267736
+    bytes: 100662532
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 6834
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 3207
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 1080
+      ip_addresses: 1700
+      phone_numbers: 1071
+      mail_routing_headers: 0
+      credentials: 281
