@@ -14,5 +14,7 @@ entries:
     type: dir
   - name: oasst2
     type: dir
+  - name: tulu3
+    type: dir
   - name: ultrachat-200k
     type: dir

@@ -1,0 +1,6 @@
+kind: index
+schema: 1
+path: post-train/sft/tulu3
+entries:
+  - name: tulu3.yaml
+    type: manifest

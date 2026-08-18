@@ -1,0 +1,183 @@
+kind: manifest
+schema: 2
+name: tulu3
+title: Tulu 3 SFT Mixture
+description: The pinned Tulu 3 supervised fine-tuning mixture with per-record source labels retained for downstream filtering.
+license: ODC-BY-1.0
+sources:
+  - name: allenai/tulu-3-sft-mixture
+    source: allenai/tulu-3-sft-mixture
+    version: b14afda60f1bbebe55d5d2fa1e4df5042f97f8be
+    license: ODC-BY-1.0
+    license_evidence:
+      declaration: ODC-BY-1.0 collection; constituent datasets retain their own terms.
+      url: https://huggingface.co/datasets/allenai/tulu-3-sft-mixture/tree/b14afda60f1bbebe55d5d2fa1e4df5042f97f8be
+    url: https://huggingface.co/datasets/allenai/tulu-3-sft-mixture
+    category: public-dataset
+    sha256: b218f5fb437c71d25922bc28bd27074615c1098ca9cd6b8198bf42cbfea38859
+    content:
+      types:
+        - instructions
+        - model responses
+        - multi-turn conversations
+      selection: All six pinned training Parquet shards. The upstream source label is retained so a compose can exclude duplicate or noncommercial subsets.
+      personal_data: unknown
+      copyrighted: yes
+      machine_generated: yes
+    acquisition:
+      basis: Public mixture assembled by Ai2 from multiple third-party instruction datasets; constituent terms require separate review.
+converted_by:
+  tool: waldo index ingest
+  version: 0.1.0-dev
+  collector: local@uncommitted:tulu3.yaml#sha256=66b5145f5ac0009744d0a94cc90edd2f0be2ed3fb739aee22a68964629aee239
+  profile: canonical-text-schema-2@sha256:8986884b184f4a630fb180690ab2edbbf319c678aff99fa1ced41295a4b44cca
+  recipe: parquet-go/0.30.1/zstd-6/page-1m/rg-64m/v9-privacy-redaction
+  tokenizer: tiktoken/cl100k_base
+record_schema: 2
+assessment:
+  email_addresses:
+    detector: waldo/email-address-v1
+    records: 0
+  repetitive_content:
+    detector: waldo/gopher-ngram-repetition-v1
+    records: 111746
+  boilerplate_content:
+    detector: waldo/gopher-structural-duplication-v1
+    records: 90453
+redaction:
+  policy: waldo/privacy-redaction-v1
+  names_retained: true
+  email_addresses: 9128
+  ip_addresses: 57607
+  phone_numbers: 146326
+  mail_routing_headers: 2
+  credentials: 2671
+shards:
+  - url: s3://openwaldo/lookaside/5c/a5/5ca5850656b40ac31776435abca617f6318cfe42c21062380a35579758aff50a
+    sha256: 5ca5850656b40ac31776435abca617f6318cfe42c21062380a35579758aff50a
+    license: ODC-BY-1.0
+    license_usage:
+      ODC-BY-1.0:
+        shards: 0
+        docs: 167289
+        tokens: 199730115
+        bytes: 0
+    sources:
+      - allenai/tulu-3-sft-mixture
+    docs: 167289
+    tokens: 199730115
+    bytes: 272807853
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 17608
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 16916
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 4251
+      ip_addresses: 24604
+      phone_numbers: 3206
+      mail_routing_headers: 2
+      credentials: 848
+  - url: s3://openwaldo/lookaside/4f/62/4f62a87a53d6e7ebfde4238074d9a0a69373437f39b4ca96bf9b0539073eaf06
+    sha256: 4f62a87a53d6e7ebfde4238074d9a0a69373437f39b4ca96bf9b0539073eaf06
+    license: ODC-BY-1.0
+    license_usage:
+      ODC-BY-1.0:
+        shards: 0
+        docs: 169133
+        tokens: 272206471
+        bytes: 0
+    sources:
+      - allenai/tulu-3-sft-mixture
+    docs: 169133
+    tokens: 272206471
+    bytes: 277740523
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 39815
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 42171
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 976
+      ip_addresses: 18044
+      phone_numbers: 2129
+      mail_routing_headers: 0
+      credentials: 464
+  - url: s3://openwaldo/lookaside/ce/8d/ce8d68aebe18b3e226c4dc3433510a7c1a0f2c613938af62a926865fc8bea3f9
+    sha256: ce8d68aebe18b3e226c4dc3433510a7c1a0f2c613938af62a926865fc8bea3f9
+    license: ODC-BY-1.0
+    license_usage:
+      ODC-BY-1.0:
+        shards: 0
+        docs: 500091
+        tokens: 240448492
+        bytes: 0
+    sources:
+      - allenai/tulu-3-sft-mixture
+    docs: 500091
+    tokens: 240448492
+    bytes: 281141011
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 49340
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 31056
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 3831
+      ip_addresses: 14948
+      phone_numbers: 140911
+      mail_routing_headers: 0
+      credentials: 1359
+  - url: s3://openwaldo/lookaside/c1/b5/c1b5c8f5f7a7fffb520807636d49a3314faa4fcb2bb0bf385de55e01f50091fb
+    sha256: c1b5c8f5f7a7fffb520807636d49a3314faa4fcb2bb0bf385de55e01f50091fb
+    license: ODC-BY-1.0
+    license_usage:
+      ODC-BY-1.0:
+        shards: 0
+        docs: 91555
+        tokens: 51326714
+        bytes: 0
+    sources:
+      - allenai/tulu-3-sft-mixture
+    docs: 91555
+    tokens: 51326714
+    bytes: 39355792
+    assessment:
+      email_addresses:
+        detector: waldo/email-address-v1
+        records: 0
+      repetitive_content:
+        detector: waldo/gopher-ngram-repetition-v1
+        records: 4983
+      boilerplate_content:
+        detector: waldo/gopher-structural-duplication-v1
+        records: 310
+    redaction:
+      policy: waldo/privacy-redaction-v1
+      names_retained: true
+      email_addresses: 70
+      ip_addresses: 11
+      phone_numbers: 80
+      mail_routing_headers: 0
+      credentials: 0
